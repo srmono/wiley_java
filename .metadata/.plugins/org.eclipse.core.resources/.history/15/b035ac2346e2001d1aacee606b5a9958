@@ -1,0 +1,24 @@
+package Exceptions;
+
+import java.io.IOException;
+
+//In Java, it's possible to handle an entire class hierarchy of exceptions 
+	//using a single catch block. This can be useful when you want to handle 
+	//all exceptions in a particular hierarchy in the same way, 
+	//without having to write separate catch blocks for each exception class.
+//
+//To handle an entire class hierarchy of exceptions, 
+	//you can catch the superclass of the exception hierarchy, 
+	//rather than catching each individual exception class
+
+public class EntireClass {
+		try {
+		  // some code that might throw an exception
+		} catch (IOException e) {
+		  // handle IOException
+		} catch (SQLException e) {
+		  // handle SQLException
+		} catch (Exception e) {
+		  // handle any other exception in the hierarchy
+		}
+}

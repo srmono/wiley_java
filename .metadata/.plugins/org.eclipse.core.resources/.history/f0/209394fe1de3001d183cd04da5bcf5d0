@@ -1,0 +1,8 @@
+package StringClasses;
+
+public class StringProcess {
+
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,37 @@
+package Wiley_core_java;
+
+public class CreateClass {
+	
+	int a = 10;
+	
+	public void add() {
+		System.out.println("Number adding");
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		
+		// Create object with new keyword
+		CreateClass cc = new CreateClass();
+		
+		cc.add();
+		
+		System.out.println(cc);
+		
+		//Create Object with newInstance()
+		try {
+			Class c = Class.forName("Wiley_core_java.CreateClass");
+			
+			CreateClass ci =  (CreateClass)c.newInstance();
+			
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

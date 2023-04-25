@@ -1,0 +1,17 @@
+package StringClasses;
+
+public class StringBuilderClass {
+	public static void main(String[] args) {
+//		StringBuilder sb = new StringBuilder("Wiley");
+//		sb.append(" Edge");
+		
+		//"[timestamp user : userId, message: logged in successfully]"
+		
+		StringBuilder logMessage = new StringBuilder();
+		
+		long timestamp = System.currentTimeMillis();
+		
+		logMessage.append();
+		
+	}
+}

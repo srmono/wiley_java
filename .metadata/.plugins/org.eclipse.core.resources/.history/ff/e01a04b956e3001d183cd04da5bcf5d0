@@ -1,0 +1,25 @@
+package IOStream;
+
+import java.util.*;
+import java.io.*;
+
+public class StudentRecordOutput {
+	DataOutputStream dataOutput;
+	
+	public StudentRecordOutput(String outputFile) throws IOException {
+		
+		dataOutput = new DataOutputStream(new FileOutputStream(outputFile));
+	}
+	
+	public void write(Student student) throws IOException {
+		dataOutput.writeUTF(student.getName());
+		dataOutput.writeBoolean(student.getGender());
+	}
+	
+	public void save() {}
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,7 @@
+package Exceptions;
+
+public class UnChecked {
+	public static void main(String[] args) {
+
+	}
+}

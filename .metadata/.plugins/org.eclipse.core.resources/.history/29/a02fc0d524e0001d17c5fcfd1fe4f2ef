@@ -1,0 +1,20 @@
+package Wiley_core_java;
+
+
+class Vehicle {
+	public void tier() {
+		System.out.println("tier");
+	}
+	
+	public void steering() {
+		System.out.println("steering");
+	}
+}
+
+class SmartCar {
+	
+}
+
+public interface MultiLevelInheritance {
+
+}

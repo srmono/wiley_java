@@ -1,0 +1,10 @@
+package IOStream;
+
+import java.util.*;
+import java.io.*;
+
+public class StudentRecordOutput {
+	public static void main(String[] args) {
+		
+	}
+}

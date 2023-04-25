@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;basics.NonAccess&apos; to &apos;Counter&apos;&#x0D;&#x0A;- Original project: &apos;wiley_core_java&apos;&#x0D;&#x0A;- Original element: &apos;basics.NonAccess&apos;&#x0D;&#x0A;- Renamed element: &apos;basics.Counter&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NonAccess&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;basics{NonAccess.java[NonAccess" matchStrategy="1" name="Counter" qualified="false" references="true" similarDeclarations="false" stamp="1682290058912" textual="false" version="1.0"/>
+</session>

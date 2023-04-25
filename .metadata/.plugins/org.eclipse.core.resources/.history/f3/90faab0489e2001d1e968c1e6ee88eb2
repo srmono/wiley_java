@@ -1,0 +1,21 @@
+package Exceptions;
+
+class AgeNotValid extends Exception{
+	public AgeNotValid(String message) {
+		super(message)
+	}
+}
+
+
+public class CustomException {
+	
+	public static void getAge(int age) {
+		if(age > 18) {
+			throw new AgeNotValid("age not valid");
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

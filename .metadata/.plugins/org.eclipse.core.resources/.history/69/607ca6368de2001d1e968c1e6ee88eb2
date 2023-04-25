@@ -1,0 +1,22 @@
+package Exceptions;
+
+import java.util.ArrayList;
+
+public class UnChecked {
+	public static void main(String[] args) {
+		ArrayList<String> students = new ArrayList<>();
+		
+		students.add("venkat");
+		students.add("Anjali");
+		students.add("Rishav");
+		
+		if (condition) {
+			
+		} else {
+
+		}
+		
+		
+		
+	}
+}

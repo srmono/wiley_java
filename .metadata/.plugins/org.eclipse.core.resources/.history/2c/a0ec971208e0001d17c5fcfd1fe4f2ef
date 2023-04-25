@@ -1,0 +1,20 @@
+package Wiley_core_java;
+
+public class VarScope {
+	
+	int ins = 20;
+
+	public static void main(String[] args) {
+		
+		int loc = 10;
+		
+		VarScope vso = new VarScope();
+		
+		System.out.println("Local variable loc : " + loc);
+		
+		System.out.println("instance variable ins : " + vso.ins);
+		
+	}
+}
+
+

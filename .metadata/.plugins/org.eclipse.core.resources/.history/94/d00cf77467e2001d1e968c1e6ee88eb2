@@ -1,0 +1,16 @@
+package Wiley_core_java;
+
+public class Counter {
+	
+	private static int count = 0;
+	private final String names;
+	
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

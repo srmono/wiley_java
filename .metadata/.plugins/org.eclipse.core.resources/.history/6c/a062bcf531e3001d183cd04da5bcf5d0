@@ -1,0 +1,9 @@
+package StringClasses;
+
+public class StringFormat {
+	public static void main(String[] args) {
+		String title = "Java Developer";
+		float salary = 2000.39f;
+		System.out.format("%s has %.2f USD salary", title, salary);
+	}
+}

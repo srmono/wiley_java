@@ -1,0 +1,15 @@
+package Wiley_core_java;
+
+interface Person{
+	public void getRole();
+}
+
+interface Student extends Person{}
+
+class Teacher implements Person{
+	
+}
+
+public class DiamondProblem {
+
+}

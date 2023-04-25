@@ -1,0 +1,7 @@
+package StringClasses;
+
+public class StringTokenClass {
+	public static void main(String[] args) {
+		
+	}
+}

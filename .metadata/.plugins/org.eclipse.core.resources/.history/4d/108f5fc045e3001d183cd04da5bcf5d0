@@ -1,0 +1,7 @@
+package IOStream;
+
+public class BOStream {
+	public static void main(String[] args) {
+		
+	}
+}

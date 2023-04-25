@@ -1,0 +1,8 @@
+package IOStream;
+
+public class DataStreamClass {
+	public static void main(String[] args) {
+		
+	}
+
+}

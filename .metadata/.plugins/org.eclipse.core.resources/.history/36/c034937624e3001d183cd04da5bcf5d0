@@ -1,0 +1,7 @@
+package StringClasses;
+
+public class StringBufferClass {
+	public static void main(String[] args) {
+
+	}
+}

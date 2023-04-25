@@ -1,0 +1,41 @@
+package Exceptions;
+
+//Throwable
+//|
+//+-- Error
+//|     |
+//|     +-- VirtualMachineError
+//|     |     |
+//|     |     +-- OutOfMemoryError
+//|     |     +-- StackOverflowError
+//|     |     +-- ...
+//|     |
+//|     +-- AssertionError
+//|
+//+-- Exception
+//      |
+//      +-- RuntimeException
+//      |     |
+//      |     +-- NullPointerException
+//      |     +-- ArrayIndexOutOfBoundsException
+//      |     +-- ArithmeticException
+//      |     +-- ...
+//      |
+//      +-- IOException
+//      |     |
+//      |     +-- FileNotFoundException
+//      |     +-- EOFException
+//      |     +-- ...
+//      |
+//      +-- SQLException
+//      |     |
+//      |     +-- SQLSyntaxErrorException
+//      |     +-- SQLDataException
+//      |     +-- ...
+//      |
+//      +-- ...
+//
+
+public class ExceptionHierarchy {
+
+}

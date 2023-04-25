@@ -1,0 +1,16 @@
+package Wiley_core_java;
+
+class Animal{
+	public void eat() {
+		System.out.println("Eat");
+	}
+	
+	public void sleep() {
+		System.out.println("sleep");
+	}
+}
+
+public class SingleInheritance {
+
+	
+}
