@@ -1,0 +1,24 @@
+package IOStream;
+
+import java.util.*;
+import java.io.*;
+
+public class StudentRecordReader {
+	DataInputStream dataInput;
+	
+	public StudentRecordReader(String inputFile) throws FileNotFoundException {
+		dataInput = new DataInputStream(new FileInputStream(inputFile));
+	}
+	
+	//data in byte
+	public List<Student> readAll() {
+		List<Student> listStudent = new ArrayList<>();
+		
+		return null;
+	}
+	
+
+	public static void main(String[] args) {
+		
+	}
+}

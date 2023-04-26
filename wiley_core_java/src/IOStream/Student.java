@@ -5,6 +5,7 @@ public class Student {
 	private boolean gender; // true: male, false: female
 	private int age;
 	private float grade;
+	//private float salary;
 
 	public Student(String name, boolean gender, int age, float grade) {
 		super();

@@ -1,0 +1,13 @@
+Hello, Javay!essFile class provides methods for 
+seeking to a specific position within a file, 
+reading or writing bytes, reading or writing various types of data, 
+and closing the file. Some of the methods provided by the 
+RandomAccessFile class include:
+
+- seek(long pos): 	sets the file-pointer position relative to the beginning of the file.
+- read(): 		reads a byte of data from the file.
+- read(byte[] b): 	reads up to b.length bytes of data from the file into an array of bytes.
+- write(int b): 	writes a byte of data to the file.
+- write(byte[] b): 	writes b.length bytes of data to the file from an array of bytes.
+
+- readBoolean(), readByte(), readChar(), readDouble(), readFloat(), readInt(), readLong(), readShort(): read data of various types from the file.

@@ -1,0 +1,16 @@
+package IOStream;
+
+import java.io.DataInputStream;
+
+public class StudentRecordReader {
+	DataInputStream dataInput;
+	
+	public StudentRecordReader(String inputFile) {
+		dataInput = new DataInputStream(inputFile);
+	}
+	
+
+	public static void main(String[] args) {
+		
+	}
+}

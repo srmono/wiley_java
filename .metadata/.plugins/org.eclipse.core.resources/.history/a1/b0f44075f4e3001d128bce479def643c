@@ -1,0 +1,22 @@
+package IOStream;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileStreams {
+	public static void main(String[] args) throws IOException {
+		FileOutputStream fout = new FileOutputStream("I:\\Training\\Wiley\\resources\\java_concepts\\wiley_core_java\\data\\data4.txt");
+		
+		String str = "Wiley fullstack project";
+		
+		byte[] b = str.getBytes();
+		
+		fout.write(b);
+		
+		fout.flush();
+		fout.close();
+		
+		
+		
+	}
+}
