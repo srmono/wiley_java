@@ -1,0 +1,8 @@
+package SerializationConcepts;
+
+import java.io.Serializable;
+
+public class Book implements Serializable {
+	int bookCode;
+	String bookName;
+}

@@ -1,0 +1,14 @@
+package RandomConcepts;
+
+import java.text.NumberFormat;
+import java.util.Currency;
+import java.util.Locale;
+
+public class CurrencyClass {
+	public static void main(String[] args) {
+		Currency usd = Currency.getInstance("USD");
+		NumberFormat format = NumberFormat.getCurrencyInstance(Locale.US);
+		String 
+		
+	}
+}

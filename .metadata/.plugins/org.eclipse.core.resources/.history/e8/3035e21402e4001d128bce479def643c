@@ -1,0 +1,7 @@
+package SerializationConcepts;
+
+public class DeSerializableObj {
+	public static void main(String[] args) {
+
+	}
+}

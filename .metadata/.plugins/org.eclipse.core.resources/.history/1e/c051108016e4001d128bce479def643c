@@ -1,0 +1,7 @@
+package RandomConcepts;
+
+public class NumberClass {
+	public static void main(String[] args) {
+		BigDecimal num1 = new BigDecimal("10.5");
+	}
+}

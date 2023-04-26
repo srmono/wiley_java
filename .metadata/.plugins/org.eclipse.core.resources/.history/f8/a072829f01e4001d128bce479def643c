@@ -1,0 +1,8 @@
+package SerializationConcepts;
+
+public class SerializableObj {
+
+	public static void main(String[] args) {
+		
+	}
+}

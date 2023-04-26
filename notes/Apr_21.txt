@@ -1,0 +1,231 @@
+
+Private :- Use with var, method, child classes; [ we can access only within class.]
+Default :- var, method, classe; [ within same package.]
+Protected :- var, method ; [within package possible, outside package only child classes]
+Public :- var, method and class ;[ access anywhere ].
+
+
+
+
+Java OOP
+
+Classes & Objects
+
+Class
+Object
+Inheritance
+Polymorphism
+Abstraction
+Encapsulation
+
+object 
+	properties: name, age 
+	methods: 
+
+Car
+	props: color: pearl white, branch: BMW
+	methods: start(), moving()
+
+-----------------------------
+
+Inbuilt classes in java
+
+1. Object class
+2. Exception Handling Classes
+3. I/O classes
+4. File Handling classes
+...
+
+
+User can define their own class using the "class" keyword
+
+-------------------------------------------
+
+class Person{}
+
+there are different ways to create object
+
+1. Java new operator
+2. Class.newInstance() method
+3. Object.clone() method
+4. Java Object Serialization and Deserialization
+
+----------------------
+
+Class content
+
+- variables
+- methods
+- constructor
+- instance blocks
+- static blocks
+
+***- variables
+Local Varibale:
+Declare: with in method, constructor block
+Scope: with in methods, csonstructor block
+Memory Allocation: 
+	Method invoked then memory occupied
+	Method execution compelte memory release
+Store Memory:
+	Local variable stores in stack memory
+	
+---
+
+Instance Varibale:
+Declare: 
+	wtih in class outside method,  (constructor, block)
+
+Scope: anywhere with in the class, with using object
+
+Memory Allocation: 
+	memory allocate when object is created
+	Object destroyed memory is free
+
+Store Memory:
+	Stored in heap memory
+---
+
+Static Varibale:
+Declare: 
+	wtih in class but outside method with static keyword
+
+Scope:  with in the class
+
+Memory Allocation: 
+	class file loading memory allocate
+	class file unloading memory free
+
+Store Memory:
+	Stored in non-heap / static pool
+
+- methods
+- constructor
+- instance blocks
+- static blocks
+
+---------------------------------
+Java Methods
+
+
+User defined method types:
+Instance Methods: 
+create object then call 
+
+Static Methods
+Static methods in java that can be called without creating an object of class. 
+
+Modifiers: []
+
+------------------------
+
+Constructors
+
+Role/rules for create constructor:
+
+- constructor name and class name should be same
+- constructor able to take parameters
+- constructor not allowed return type
+
+Types of constructors:
+- default constructor
+- user defined constructor
+	[0 args, constructor and parameterized constructor]
+
+
+-------------------
+
+Instance Block
+- it run each time when object is created
+
+- instance block after constructor
+
+{}
+
+---------------------------------
+Static Block
+- initialize static member
+- execute when class loads
+- execute only once
+- using static keyword
+
+static {
+}
+	
+-------------------
+
+Inheritance 
+- extends
+- java doesn't support multiple inheritance
+- 
+
+Types of inheritance
+- single inheritance
+- multilevel inheritance
+- Hieranchial inheritance
+- Hybrid
+- multiple inheritance : doesn't support
+
+Interface
+--------------
+
+Polymorpism
+
+Compile time
+	method overloading
+	constructor overloading
+	operator overloading (+)
+
+a + b 
+system.out.println(" " + a)
+
+
+Runtime
+	method overriding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

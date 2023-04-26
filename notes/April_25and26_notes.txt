@@ -1,0 +1,474 @@
+
+- Coupling & Cohesion:
+
+***Coupling: Suppose we have two classes, "Cart" and "Payment". The "Cart" class is responsible for managing the items in the user's shopping cart, while the "Payment" class handles the payment process. If the "Cart" class depends on the "Payment" class to perform its operations, then we have a high coupling between the two classes. For example, if the "Cart" class calls the "Payment" class directly to initiate the payment process, any changes made to the "Payment" class could affect the "Cart" class, making it more difficult to maintain.
+
+To reduce coupling, we could create an interface, such as "PaymentProcessor", that the "Payment" class implements. The "Cart" class can then interact with the "PaymentProcessor" interface instead of the "Payment" class directly. This way, the "Cart" class is not dependent on the implementation details of the "Payment" class, and changes to the "Payment" class will not affect the "Cart" class.
+
+**Cohesion: Suppose we have a "Cart" class that is responsible for managing the items in the user's shopping cart. If this class contains methods that handle other unrelated tasks, such as sending email notifications or logging errors, then it has low cohesion. The methods should be grouped based on their functionality, and unrelated methods should be moved to their respective classes.
+To increase cohesion, we could create a separate "EmailNotification" class that handles sending email notifications, and a "Logger" class that handles logging errors. The "Cart" class would then have a single responsibility of managing the items in the user's shopping cart, which increases its cohesion.
+
+In summary, coupling and cohesion are important concepts in Java programming, and they can greatly affect the maintainability and extensibility of a program. By reducing coupling and increasing cohesion, we can create modular, easy-to-understand, and maintainable code.
+
+-----------------------------------------------------
+
+String Class: 
+
+The String class is a built-in class that represents a sequence of characters. It is used to store and manipulate text in Java programs. The String class is part of the Java standard library, which means that it is included in every Java runtime environment.
+
+The String class provides a wide range of methods for working with strings, including methods for concatenating strings, extracting substrings, comparing strings, and converting strings to other data types. Because strings are so fundamental to Java programming, the String class is one of the most commonly used classes in Java.
+
+In Java, strings are represented as objects, so you can create a new String object by calling its constructor. For example, you can create a new String object in 2 ways
+
+
+String greeting = new String("Hello, Wiley!"); object
+String greeting = "Hello, Wiley!"; // literal
+
+char[] name = ['w','i','l','e','y']
+
+String class how many char we can store
+
+	0  to 214783647
+
+int length()
+
+char charAt(0) 
+
+---------
+
+Both StringBuffer and StringBuilder classes are used to create and manipulate strings in Java. They both provide methods for appending, deleting, replacing, and inserting characters in a string. Here are some of the most commonly used methods in these classes:
+
+String Buffer 
+
+append(str) - Appends the string str to the end of the current string.
+insert(index, str) - Inserts the string str at the specified index.
+delete(start, end) - Deletes the characters from the start index to the end-1 index.
+replace(start, end, str) - Replaces the characters from the start index to the end-1 index with the string str.
+charAt(index) - Returns the character at the specified index.
+length() - Returns the length of the current string.
+substring(start) - Returns a new string that is a substring of the current string, starting from the start index.
+substring(start, end) - Returns a new string that is a substring of the current string, starting from the start index and ending at the end-1 index.
+reverse() - Reverses the characters in the current string.
+
+
+Note that StringBuffer is thread-safe, which means that multiple threads can access the same object without interfering with each other's operations. On the other hand, StringBuilder is not thread-safe, but it is faster than StringBuffer because it does not have the overhead of synchronization.
+
+In general, if you are working in a multi-threaded environment, you should use StringBuffer. Otherwise, if you are working in a single-threaded environment, you should use StringBuilder for better performance.
+
+-------------
+
+String Tokenizer:
+StringTokenizer is a class in Java that allows you to break a string into tokens (substrings) by specifying a set of delimiters. It is useful when you need to process text that has a fixed or well-defined format, such as a CSV (comma-separated values) file or a log file.
+
+String input = "John,Doe,30,Male";
+StringTokenizer tokenizer = new StringTokenizer(input, ",");
+while (tokenizer.hasMoreTokens()) {
+    String token = tokenizer.nextToken();
+    System.out.println(token);
+}
+
+
+----------------------------- 
+String format
+
+printf
+format(string formant, object, args)
+
+----------------
+
+JAVA I/O Streams -> sequence of data
+
+Data(input)	->	java app (process)	-> 	data(output)
+
+source	-> over the network --> app --> over the network -> Destination
+
+java.io  
+
+Byte Stream		-> handle input and output of bytes
+Character stream	-> handle input and output of characters
+
+*******************
+Byte stream is used for reading and writing binary data, such as images, audio files, or any non-text files. The byte stream classes are defined in the java.io package and their names usually end with InputStream or OutputStream. Examples of byte stream classes include FileInputStream, FileOutputStream, and ByteArrayInputStream.
+
+On the other hand, character stream is used for reading and writing text data, such as text files or input/output from the user. The character stream classes are defined in the java.io package and their names usually end with Reader or Writer. Examples of character stream classes include FileReader, FileWriter, and BufferedReader.
+
+One of the main differences between byte stream and character stream is the way they handle the data. Byte stream reads and writes data byte-by-byte, which means it reads and writes binary data, while character stream reads and writes data character-by-character, which means it handles text data. Another difference is that character stream handles character encoding, which is important when reading or writing text data, while byte stream does not.
+
+*******************
+
+**In Java, a byte stream is a sequence of bytes that is used to read or write data. The byte stream hierarchy in Java consists of two types of streams: input streams and output streams.
+
+The input stream hierarchy starts with the InputStream class, which is an abstract class that defines methods for reading bytes. The InputStream class has several concrete subclasses, including FileInputStream, ByteArrayInputStream, FilterInputStream, and ObjectInputStream.
+
+FileInputStream is used for reading data from a file on the disk.
+ByteArrayInputStream is used for reading data from a byte array.
+FilterInputStream is an abstract class that provides a framework for filtering input streams.
+ObjectInputStream is used for reading objects from an input stream.
+The output stream hierarchy starts with the OutputStream class, which is an abstract class that defines methods for writing bytes. The OutputStream class has several concrete subclasses, including FileOutputStream, ByteArrayOutputStream, FilterOutputStream, and ObjectOutputStream.
+
+FileOutputStream is used for writing data to a file on the disk.
+ByteArrayOutputStream is used for writing data to a byte array.
+FilterOutputStream is an abstract class that provides a framework for filtering output streams.
+ObjectOutputStream is used for writing objects to an output stream.
+The byte stream hierarchy in Java allows for flexible and efficient reading and writing of data in a variety of scenarios. Developers can choose the appropriate input or output stream subclass based on the source or destination of the data.
+
+**In Java, a character stream is a sequence of characters that is used to read or write textual data. The character stream hierarchy in Java consists of two types of streams: input streams and output streams.
+
+The input stream hierarchy starts with the Reader class, which is an abstract class that defines methods for reading characters. The Reader class has several concrete subclasses, including FileReader, CharArrayReader, BufferedReader, and InputStreamReader.
+
+FileReader is used for reading data from a file on the disk.
+CharArrayReader is used for reading data from a character array.
+BufferedReader is used for buffering input data for improved efficiency.
+InputStreamReader is used for reading data from a byte stream and converting it to characters.
+The output stream hierarchy starts with the Writer class, which is an abstract class that defines methods for writing characters. The Writer class has several concrete subclasses, including FileWriter, CharArrayWriter, BufferedWriter, and OutputStreamWriter.
+
+FileWriter is used for writing data to a file on the disk.
+CharArrayWriter is used for writing data to a character array.
+BufferedWriter is used for buffering output data for improved efficiency.
+OutputStreamWriter is used for writing data to a byte stream and converting it from characters.
+The character stream hierarchy in Java allows for flexible and efficient reading and writing of textual data in a variety of scenarios. Developers can choose the appropriate input or output stream subclass based on the source or destination of the data, and the appropriate buffering mechanism to optimize performance.
+
+
+Byte Stream: 
+	- InputStream
+	- OutputStream
+
+Stream Class
+BufferedInputStream
+BufferedOutputStream
+
+DataInputStream
+DataOutputStream
+
+FileInputStream
+FileOutputStream
+
+InputStream
+OutputStream
+
+------------------------
+
+***BufferedInputStream and BufferedOutputStream are classes in Java that provide buffering functionality to the input and output streams, respectively. They are useful when you need to improve the performance of I/O operations by reducing the number of calls to the underlying operating system.
+
+
+BufferedInputStream
+	read information
+BufferedOutputStream
+	write information
+
+try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream("input.txt"));
+     BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("output.txt"))) {
+
+    byte[] buffer = new byte[1024];
+    int bytesRead;
+
+    while ((bytesRead = bis.read(buffer)) != -1) {
+        bos.write(buffer, 0, bytesRead);
+    }
+}
+
+
+
+*** DataInputStream and DataOutputStream are classes in Java that provide methods for reading and writing data in a machine-independent format. They are useful when you need to exchange data between different systems that may use different byte orders or data types.
+
+DataInputStream
+DataOutputStream
+
+try (DataOutputStream dos = new DataOutputStream(new FileOutputStream("data.bin"))) {
+    dos.writeInt(12345);
+    dos.writeDouble(3.14159);
+    dos.writeUTF("Hello, world!");
+}
+
+try (DataInputStream dis = new DataInputStream(new FileInputStream("data.bin"))) {
+    int intValue = dis.readInt();
+    double doubleValue = dis.readDouble();
+    String stringValue = dis.readUTF();
+
+    System.out.println(intValue);
+    System.out.println(doubleValue);
+    System.out.println(stringValue);
+}
+
+--------------
+
+Data Input and output stream
+
+DataInputStream Reading Operations
+As you can see, the DataInputStream class is descended from the InputStream class so it has all behaviors of a byte input stream. In addition, it implements the DataInput interface which defines the following read operations for primitive types and Strings:
+readBoolean(): Reads one input byte and returns true if that byte is nonzero, false if that byte is zero.
+readByte(): Reads and returns one input byte.
+readChar(): Reads 2 input bytes and returns a char value.
+readDouble():Reads 8 input bytes and returns a double value.
+readFloat(): Reads 4 input bytes and returns a float value.
+readInt(): Reads 4 input bytes and returns an int value.
+readLong(): Reads 8 input bytes and returns a long value.
+readShort(): Reads 2 input bytes and returns a short value.
+readUTF(): Reads in a string that has been encoded using a modified UTF-8 format.
+
+
+
+DataInputStream dataInput = new DataInputStream(new FileInputStream(inputFile));
+
+
+DataInputStream Writing Operations
+
+Likewise, a DataOutputStream class is descended from the OutputStream class so it inherits all behaviors of a byte output stream. In addition, it implements the DataOutput interface which defines the following write operations for primitive types and Strings:
+writeBoolean(boolean v): Writes a boolean to the underlying output stream as a 1-byte value.
+writeByte(int v): Writes out a byte to the underlying output stream as a 1-byte value.
+writeBytes(String s): Writes out the string to the underlying output stream as a sequence of bytes.
+writeChar(int v): Writes a char to the underlying output stream as a 2-byte value, high byte first.
+writeChars(String s): Writes a string to the underlying output stream as a sequence of characters.
+writeDouble(double v): Converts the double argument to a long using the doubleToLongBits method in class Double, and then writes that long value to the underlying output stream as an 8-byte quantity, high byte first.
+writeFloat(float v): Converts the float argument to an int using the floatToIntBits method in class Float, and then writes that int value to the underlying output stream as a 4-byte quantity, high byte first.
+writeInt(int v): Writes an int to the underlying output stream as four bytes, high byte first.
+writeLong(long v): Writes a long to the underlying output stream as eight bytes, high byte first.
+writeShort(int v): Writes a short to the underlying output stream as two bytes, high byte first.
+writeUTF(String str): Writes a string to the underlying output stream using modified UTF-8 encoding in a machine-independent manner.
+
+DataOutputStream dataOutput = new DataOutputStream(new FileOutputStream(outputFile));
+
+----------------------
+FileInputStream
+FileOutputStream
+	byte-oriented data (steams of raw bytes): text, image, audio, video
+------------------------------------
+
+InputStream
+OutputStream
+	classes are abstract classes
+-----------------------
+
+CharacterStream
+- BufferedReader
+- BufferedWriter
+- FileReader
+- FileWriter
+- InputStreamReader
+- OutputStreamWriter
+- PrintWriter
+
+Abstract class that define character stream input and output
+- Reader
+- Writer
+
+Byte Steam -> text, image, audio, video
+	-> read/write binary data
+	-> input/output 8 bit bytes
+	-> Buffered(input/output)Stream reduce I/O operations in os level calls 
+	-> Data(input/output)Stream machine independent byte order
+	-> File(input/output)Stream byte-oriented data (steams of raw bytes)
+	
+Character Stream
+	-> Characters : text data
+	-> input/output operations of 16bit unicode character streams 
+
+-----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------
+
+
+RandomAccessFile class provides random access to a file's contents. It allows you to read or write data at a specific position within a file, and it can be used to read or write both binary and text data. The RandomAccessFile class implements both the DataInput and DataOutput interfaces, providing methods for reading and writing various types of data.
+
+The RandomAccessFile class provides the following constructors:
+
+RandomAccessFile(File file, String mode): creates a new RandomAccessFile object for the specified file with the specified access mode.
+
+- RandomAccessFile(String fileName, String mode): creates a new RandomAccessFile object for the specified file name with the specified access mode.
+
+The access mode can be "r" for read-only access, "rw" for read-write access, "rws" for read-write access with synchronized file access, or "rwd" for read-write access with synchronized file access and synchronous updates to the underlying storage device.
+
+The RandomAccessFile class provides methods for seeking to a specific position within a file, reading or writing bytes, reading or writing various types of data, and closing the file. Some of the methods provided by the RandomAccessFile class include:
+
+- seek(long pos): 	sets the file-pointer position relative to the beginning of the file.
+- read(): 		reads a byte of data from the file.
+- read(byte[] b): 	reads up to b.length bytes of data from the file into an array of bytes.
+- write(int b): 	writes a byte of data to the file.
+- write(byte[] b): 	writes b.length bytes of data to the file from an array of bytes.
+
+- readBoolean(), readByte(), readChar(), readDouble(), readFloat(), readInt(), readLong(), readShort(): read data of various types from the file.
+
+- writeBoolean(boolean v), writeByte(int v), writeChar(int v), writeDouble(double v), writeFloat(float v), writeInt(int v), writeLong(long v), writeShort(int v): write data of various types to the file.
+
+The RandomAccessFile class provides a powerful mechanism for random access to file data, and it is useful for working with large files or files with a complex structure.
+
+import java.io.*;
+
+public class RandomAccessExample {
+    public static void main(String[] args) {
+        try {
+            // create a new file and write some data to it
+            RandomAccessFile file = new RandomAccessFile("testfile.txt", "rw");
+            file.writeBytes("Hello, World!");
+
+            // read the data back from the file
+            file.seek(0);
+            byte[] bytes = new byte[13];
+            file.read(bytes);
+            String data = new String(bytes);
+
+            // print the data
+            System.out.println(data);
+
+            // write some more data to the file
+            file.seek(7);
+            file.writeBytes("Java");
+
+            // read the modified data back from the file
+            file.seek(0);
+            bytes = new byte[13];
+            file.read(bytes);
+            data = new String(bytes);
+
+            // print the modified data
+            System.out.println(data);
+
+            // close the file
+            file.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+we create a new file called "testfile.txt" and write the string "Hello, World!" to it using a RandomAccessFile object with the "rw" mode. We then read the data back from the file by setting the file pointer to the beginning of the file with the seek() method, and reading 13 bytes of data into a byte array with the read() method. We convert the byte array to a string and print it to the console.
+
+Next, we use the seek() method to set the file pointer to position 7, and write the string "Java" to the file. We then read the modified data back from the file and print it to the console.
+
+Finally, we close the RandomAccessFile object with the close() method to release any system resources used by the file.
+
+-------------------------
+
+Java Console Class
+
+The java.io.Console class provides a simple way for console-based programs to interact with the user. It provides methods for reading input from the console and writing output to the console. The Console class is available since Java 6.
+
+Hands on:
+
+
+
+-----------------
+
+Serialization in Java
+
+Serialization in Java refers to the process of converting an object into a stream of bytes, which can then be stored in a file, sent over a network, or saved in a database.
+
+The opposite process, converting a stream of bytes back into an object, is called deserialization.
+
+
+Student implement Serializable inteface
+
+
+
+------------------------------------------
+
+Dates, Numbers, and Currency
+
+Dates
+The core Java API for working with dates is the java.time package, introduced in Java 8. It includes classes for representing dates, times, durations, and intervals.
+
+LocalDate date = LocalDate.now(); // Current date
+
+LocalDate : Represents date(year, month, day (yyyy - MM - dd))
+LocalTime : Represents time (hour, minutes, second , and nanoseconds (HH-mm-ss-ns))
+LcalDateTime: Represents date and time (yyyy - MM - dd HH-mm-ss-ns)
+DateTimeFormatter: format for display
+
+
+
+Numbers
+Java provides several classes for working with numbers, including Integer, Long, Float, Double, and BigDecimal. These classes allow you to perform arithmetic operations, compare values, and format numbers as strings.
+
+Currency
+Java provides the java.util.Currency class for working with currencies. This class allows you to get the currency code, symbol, and display name for a currency.
+
+USD $
+
+
+------------------------------
+Parsing, Tokenizing, Formatting
+
+Parsing
+Parsing involves taking a string and converting it into a data type. This is useful when you need to extract data from a string or read in user input.
+
+Tokenizing
+Tokenizing involves breaking a string into smaller pieces or tokens based on a delimiter. This is useful when you need to process text data, such as reading in a CSV file.
+
+Formatting
+Formatting involves converting a data value into a string with a specific format. This is useful when you need to display data to the user or write data to a file. 
+---------------
+
+Pattern Matching
+
+String urlRegex = "\\b(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]*[-A-Za-z0-9+&@#/%=~_|]";
+String emailRegex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
+
+
+"hey student find the url to open wiley edge https://www.wileyedge.com . .."
+
+bvsrao91gmail.com
+
+Java Regular expressions, also known as regex or regexp, are patterns that can be used to match character combinations in text. They are powerful tools for text processing and are widely used in applications such as web development, data mining, and natural language processing.
+
+In Java, regular expressions are supported by the java.util.regex package, which provides classes for working with regular expressions, such as Pattern and Matcher. 
+
+
+
+- Character classes: A character class matches any single character within a set of characters. For example, [abc] matches any of the characters 'a', 'b', or 'c'. Character classes can also use ranges, such as [a-z] which matches any lowercase letter.
+
+- Quantifiers: A quantifier specifies how many times a pattern should be matched. For example, + matches one or more occurrences of the preceding pattern, while * matches zero or more occurrences.
+
+- Anchors: Anchors are used to match patterns at specific positions in the input string. 
+
+For example, ^ matches the beginning of the input string, while $ matches the end.
+^$
+
+- Grouping and capturing: Parentheses can be used to group patterns together and apply quantifiers to the entire group. Additionally, capturing groups can be used to extract portions of the matched text.
+
+- Alternation: Alternation allows you to match one of several patterns. For example, a|b matches either 'a' or 'b'.
+
+java.util.regex package
+ Pattern
+ Matcher
+ PatternSyntaxException
+
+Flags
+Pattern.CASE_INSENSITIVE 
+Pattern.LITERAL
+Pattern.UNICODE_CASE
+
+Ranges of characters
+[a,b,c]
+[^abc]
+[0-9]
+
+Meta Characters 
+
+-----
+
+CSV format
+
+products.csv 
+Read csv
+tokenization
+process the data
+store in to arraylist of products
+print
+
+product.class

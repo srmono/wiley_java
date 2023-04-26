@@ -1,0 +1,417 @@
+
+
+Abstraction:
+
+Abstraction in Java is a mechanism that allows you to represent complex real-world objects in a simplified manner. It is one of the four fundamental principles of object-oriented programming (OOP), along with encapsulation, inheritance, and polymorphism.
+
+In Java, abstraction is achieved through abstract classes and interfaces. An abstract class is a class that cannot be instantiated, but can be extended by subclasses. It can have both abstract and concrete methods. An abstract method is a method that has no implementation and must be implemented by a subclass.
+
+
+2 types:
+	Abstract (0, 100), Interface(100%)
+
+Abstract roles:
+- we can't define abstract class or interface as final
+- we can't create abstract class or interface object because its partially complete
+- we can't access abstract class method because we can't create abstract class object
+- is it possible to declare main method inside abstract class?
+- can we create abstract class constructor?
+
+
+
+public abstract class Animal {
+    public abstract void makeSound();
+    
+    public void sleep() {
+        System.out.println("zzz");
+    }
+}
+
+
+In this example, Animal is an abstract class that has one abstract method makeSound() and one concrete method sleep(). An abstract method is defined using the abstract keyword and has no implementation. Subclasses of Animal must implement makeSound().
+
+An interface is similar to an abstract class in that it defines a set of methods that must be implemented by a class that implements the interface. However, an interface cannot have any concrete methods and cannot be instantiated. Here's an example of an interface in Java:
+
+public interface Shape {
+    double getArea();
+    double getPerimeter();
+}
+
+
+** abstraction in java with real time example
+
+Let's say you are designing a game that includes different types of vehicles such as cars, bikes, and airplanes. Each vehicle has some common characteristics, such as a speed, a color, and a number of wheels, but each type of vehicle also has unique behaviors, such as the ability to fly, the ability to turn, etc.
+
+public abstract class Vehicle {
+    protected String color;
+    protected int speed;
+    protected int numWheels;
+    
+    public Vehicle(String color, int speed, int numWheels) {
+        this.color = color;
+        this.speed = speed;
+        this.numWheels = numWheels;
+    }
+    
+    public abstract void move();
+}
+
+
+In this example, Vehicle is an abstract class that includes three common characteristics of all vehicles: color, speed, and numWheels. It also includes an abstract method move(), which represents the unique behavior of each vehicle.
+
+Now, you can create subclasses of Vehicle for each type of vehicle, and implement their unique behaviors. For example, here's how you could define a Car class:
+
+public class Car extends Vehicle {
+    public Car(String color, int speed) {
+        super(color, speed, 4);
+    }
+    
+    public void move() {
+        System.out.println("Driving on the road...");
+    }
+    
+    public void turn() {
+        System.out.println("Turning left or right...");
+    }
+}
+
+
+In this example, Car is a subclass of Vehicle that represents a car. It overrides the move() method to represent the unique behavior of a car, which is driving on the road. It also defines a new method turn() that represents the ability of a car to turn left or right.
+
+You could create similar subclasses for other types of vehicles, such as Bike and Airplane, each with their own unique behaviors. By using abstraction in this way, you can create a clean and modular design for your game that allows you to easily add new types of vehicles in the future.
+
+----
+
+Interface: 
+
+Interface in Java using a real-world scenario:
+
+Let's say you are designing a music streaming application that includes different types of media players such as a web player, mobile player, and desktop player. Each media player has some common functionalities, such as play, pause, stop, and skip, but each type of media player also has unique features, such as shuffle, repeat, and volume control.
+
+To represent these media players in Java, you could use an interface called MediaPlayer that includes the common functionalities of all media players:
+
+
+public interface MediaPlayer {
+    void play();
+    void pause();
+    void stop();
+    void skip();
+}
+In this example, MediaPlayer is an interface that includes four common functionalities of all media players: play(), pause(), stop(), and skip().
+
+Now, you can create classes that implement the MediaPlayer interface for each type of media player, and implement their unique features. For example, here's how you could define a WebPlayer class:
+
+public class WebPlayer implements MediaPlayer {
+    public void play() {
+        System.out.println("Playing music on the web player...");
+    }
+    
+    public void pause() {
+        System.out.println("Pausing music on the web player...");
+    }
+    
+    public void stop() {
+        System.out.println("Stopping music on the web player...");
+    }
+    
+    public void skip() {
+        System.out.println("Skipping to the next song on the web player...");
+    }
+    
+    public void shuffle() {
+        System.out.println("Shuffling songs on the web player...");
+    }
+}
+
+In this example, WebPlayer is a class that implements the MediaPlayer interface and represents a media player for a web application. It provides an implementation for each of the common functionalities defined in the MediaPlayer interface. It also defines a new method shuffle() that represents the unique feature of shuffling songs on the web player.
+
+You could create similar classes for other types of media players, such as MobilePlayer and DesktopPlayer, each with their own unique features. By using an interface in this way, you can create a flexible and extensible design for your music streaming application that allows you to easily add new types of media players in the future.
+
+
+
+*** Abstract vs Interface
+
+Both abstract classes and interfaces are used to achieve abstraction in Java, but they serve different purposes and have different characteristics. Here are some of the key differences between abstract classes and interfaces:
+
+Implementation: Abstract classes can have both abstract and non-abstract methods, and can also have instance variables, constructors, and static methods. They can also provide a default implementation for some methods, which subclasses can choose to override or use as is. In contrast, interfaces can only have abstract methods, default methods, and static methods. They cannot have instance variables or constructors.
+
+Inheritance: A subclass can only inherit from one abstract class, but it can implement multiple interfaces. This is because Java supports multiple interface inheritance but not multiple class inheritance.
+
+Purpose: Abstract classes are used to represent a common type of objects that have shared characteristics and behaviors. They are meant to be extended by subclasses that add their own unique characteristics and behaviors. Interfaces, on the other hand, are used to represent a set of related behaviors that can be implemented by different classes. They are meant to be implemented by classes that provide their own implementation of the behaviors.
+
+Access modifiers: Abstract classes can have public, protected, and package-private (default) access modifiers for their members. Interfaces can only have public access modifiers for their members.
+
+Constructor: Abstract classes have a constructor that can be invoked by their subclasses. Interfaces do not have constructors.
+
+In summary, abstract classes are used to define a common type of objects with shared characteristics and behaviors, while interfaces are used to define a set of related behaviors that can be implemented by different classes. Abstract classes provide more flexibility in terms of implementation and inheritance, while interfaces provide more flexibility in terms of polymorphism and multiple inheritance.
+
+
+--------------------------
+
+
+-------------------
+
+Acess Modifiers
+
+Modifiers: public, private, protected, final, static, abstract, synchronized, strictfp, volatile, transite, native..
+
+
+
+Acess modifiers: 
+- public, private, protected, default
+
+a class declaration is a statement that defines a new class with a given name, properties, and methods. Class declarations typically include access modifiers that define the visibility and accessibility of the class, its constructors, and its methods.
+
+Access modifiers in Java are keywords that specify the level of access to a class, method, or field. There are four access modifiers in Java:
+
+public: Classes, methods, and fields marked as public can be accessed from any other class in the same or different packages.
+
+private: Classes, methods, and fields marked as private can only be accessed within the same class in which they are declared.
+
+protected: Classes, methods, and fields marked as protected can only be accessed within the same package or by subclasses in different packages.
+
+default (no modifier): Classes, methods, and fields with no access modifier are considered to have default or package-level access. They can only be accessed within the same package.
+
+
+
+non-access modifiers: 
+- final, static, abstract, synchronized, strictfp, volatile, transient, native
+
+synchronized -> one thread can be exec.. at a time in a block
+synchronized block: {} 
+
+
+nonaccess modifiers are keywords that define additional properties of class members, such as fields and methods. Nonaccess modifiers can be used to control the behavior of class members without affecting their access level. There are several nonaccess modifiers in Java:
+
+static: When a field or method is marked as static, it belongs to the class itself rather than to any specific instance of the class. This means that the field or method can be accessed without creating an object of the class.
+
+final: When a field or method is marked as final, its value cannot be changed once it has been initialized. For a field, this means it cannot be reassigned a new value. For a method, this means it cannot be overridden in a subclass.
+
+abstract: When a method is marked as abstract, it is declared but does not have an implementation. Abstract methods must be implemented in any non-abstract subclass.
+
+synchronized: When a method is marked as synchronized, it can only be accessed by one thread at a time. This is useful for preventing multiple threads from accessing the same method simultaneously and causing race conditions.
+
+transient: When a field is marked as transient, it is excluded from the serialization process. This means that the field's value is not saved when an object is serialized and can only be set when the object is deserialized.
+
+volatile: When a field is marked as volatile, it is accessed directly from memory rather than from a cache. This can be useful for ensuring that the most up-to-date value of the field is always used.
+
+
+
+public class Counter {
+    private static int count = 0;
+    private final String name;
+
+    public Counter(String name) {
+        this.name = name;
+    }
+
+    public synchronized void increment() {
+        count++;
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+
+In this example, we have a Counter class with two fields: count and name. The count field is marked as static, which means it belongs to the class itself rather than to any specific instance of the class. The name field is marked as final, which means its value cannot be changed once it has been initialized.
+
+The Counter class also has a increment() method, which is marked as synchronized. This means that only one thread can access the method at a time, which helps prevent race conditions.
+
+Finally, the Counter class has a getCount() method, which simply returns the current value of the count field.
+
+Using nonaccess modifiers in Java can help us control the behavior of our code and ensure that our objects behave correctly in various situations.
+
+
+
+
+
+-----------------------------------------
+
+
+Exception Handling:
+
+exception is present in  java.lang package
+
+try
+	statement1
+	statement2
+	statement3
+	statement 4// exception occurs
+	statement 5//
+catch
+	exception catch
+
+compile time, run time
+
+unchecked exceptions
+checked exceptions
+
+weekend trip   (wonderla/water world)
+Start: list
+       	swimming wear
+	food
+	hotel  -> closed (terminate?)
+	....
+
+Broken bridge?
+	unchecked exception
+---
+Exception handling
+
+Types of exception:
+- unchecked exception
+- checked exception
+- Error
+
+	
+try, catch, finally, throws, throw
+
+
+
+
+Exception: print exceptional info:
+
+getMessage() 	-> 	print exception message
+
+toString()	->	with exception message
+			print exception class
+
+printStackTrace()->	exception message
+			print exception class
+			in our code which class, 					which line thows exception
+
+Multiple catch blocks
+
+Array->
+	ArrayIndexOutOfBoundsException  (most child class)
+	
+	IndexOutOfBoundsException (child class)
+
+	Exception  (parent class)
+
+
+Finally block
+
+try{
+	execute the code
+}
+catch(){
+	handle exception
+}
+--------------------------
+
+Throws keyword
+
+deligate exception 
+declare exception
+passing exception
+
+
+deligate exception till the main() methods
+
+main() method exception handled by JVM
+
+throws keyword handle only checked expection, 
+unchecked exception arise because invalid value
+
+
+
+throw -> is use to handover userdefined exception object to JVM
+
+Create custom exception:
+
+1. Create class and extend Exception or RuntimeException class
+
+userdefined exception 
+
+- checked exception
+	extend Exception class
+
+- un-checked exception
+	extend RuntimeException 
+
+Default constructor approach
+Parameterized construtor approach
+----------------------
+Uncaught Exception
+
+try catch ->  Eception, ...
+
+public m1(){
+	exception occurs....
+}
+
+call stack in java
+
+
+
+Matching exceptions?
+
+try{...}
+catch(Exception e){
+	if(e instanceof IOException){...}
+	else if(e instanceof SQLException){...}
+	else{...}
+}
+
+
+try{...}
+catch(IOException e){
+	...
+}catch(SQLException e){
+	...
+}catch(Exception e){
+	...
+}
+
+
+
+public interface FileReader{
+	List<String> readLines(String fileName) throws IOException;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
