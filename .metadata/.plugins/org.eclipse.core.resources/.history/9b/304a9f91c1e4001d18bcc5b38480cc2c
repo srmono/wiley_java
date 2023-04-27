@@ -1,0 +1,8 @@
+package Patterns;
+
+public class DivideClass {
+	public static void main(String[] args) {
+		
+		
+	}
+}

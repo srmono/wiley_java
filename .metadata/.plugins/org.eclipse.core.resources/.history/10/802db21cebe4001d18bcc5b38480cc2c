@@ -1,0 +1,16 @@
+package JavaThreads;
+
+
+class WeddingCard extends Thread{
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+	}
+}
+
+public class RishavWeddingCard {
+	public static void main(String[] args) {
+
+	}
+}

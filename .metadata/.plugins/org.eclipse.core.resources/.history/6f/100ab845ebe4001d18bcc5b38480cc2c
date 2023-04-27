@@ -1,0 +1,15 @@
+package JavaThreads;
+
+
+class WeddingCard extends Thread{
+	@Override
+	public void run() {
+		System.out.println("Thread Name:- " + Thread.currentThread().getName());
+	}
+}
+
+public class RishavWeddingCard {
+	public static void main(String[] args) {
+
+	}
+}

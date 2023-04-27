@@ -1,0 +1,25 @@
+package JavaThreads;
+
+class T1 extends Thread{
+	@Override
+	public void run() {
+		System.out.println("By Thread class");
+	}
+}
+
+class T2 implements Runnable{
+
+	@Override
+	public void run() {
+		System.out.println("By Using Runnable Interface");
+		
+	}
+	
+}
+
+
+public class ThreadConcept {
+	public static void main(String[] args) {
+		
+	}
+}

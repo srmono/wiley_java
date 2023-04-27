@@ -14,12 +14,13 @@ public class PatternMatching {
 		
 		if(matcher.find()) { 
 			int start = matcher.start();
-			int end = matcher.end();
+			int end = matcher.end(); 
 			
 			System.out.println("Found match from index " + start + " to " + (end - 1));
 		}
 		
 		String pat = "learn";
+		
 		int index = input.indexOf(pat);
 		
 		if(index != -1) {

@@ -1,0 +1,15 @@
+package JavaThreads;
+
+class T1 extends Thread{
+	@Override
+	public void run() {
+		System.out.println("By Thread class");
+	}
+}
+
+
+public class ThreadConcept {
+	public static void main(String[] args) {
+		
+	}
+}

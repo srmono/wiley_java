@@ -1,0 +1,7 @@
+package JavaThreads;
+
+public class ThreadPriority {
+	public static void main(String[] args) {
+
+	}
+}

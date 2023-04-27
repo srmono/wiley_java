@@ -74,7 +74,7 @@ public class StringFormat {
 		System.out.format("Min value of an int: %d (%1$x)%n", Integer.MIN_VALUE);
 		System.out.format("Max value of an int: %d (%1$x)%n", Integer.MAX_VALUE);
 		
-		// useing the t prefix with date time conversions (T, F and D) to write formatted Strings of current time and date to a text file:
+		//using the t prefix with date time conversions (T, F and D) to write formatted Strings of current time and date to a text file:
 		PrintWriter writer = new PrintWriter(new File("datetime.txt"));
 		 
 		writer.format("Now is %tT %n", new Date());
@@ -114,13 +114,13 @@ public class StringFormat {
 		System.out.format(specifiers, "Code Complete", "Steve McConnell", 38.42f);
 		
 		//formatting floating point numbers into scientific notation (using the e/E and gconversions):
-		float k = 1000f;
-		float m = 1000000f;
-		float t = 1000000000f;
-		 
-		System.out.format("One thousand: %.1e %n", k);
-		System.out.format("One million: %.1E %n", m);
-		System.out.format("One billion: %.2g %n", t);
+//		float k = 1000f;
+//		float m = 1000000f;
+//		float t = 1000000000f;
+//		 
+//		System.out.format("One thousand: %.1e %n", k);
+//		System.out.format("One million: %.1E %n", m);
+//		System.out.format("One billion: %.2g %n", t);
 		
 		// formatting numbers with zero-padded for numbers that are less than 5 character (%05d); encloses a negative number in parenthesis (%(d); and always includes sign for numbers (%+d):
 		System.out.format("%05d %n", 12);
