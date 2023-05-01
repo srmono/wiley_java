@@ -1,0 +1,30 @@
+package JavaThreads;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+class WeddingCardWrap extends Thread{
+	@Override
+	public void run() {
+		System.out.println("Thread Name:- " + Thread.currentThread().getName());
+	}
+}
+
+public class RishavWeddingCard {
+	public static void main(String[] args) {
+		//Fixed size pool
+//		ExecutorService executor = Executors.newFixedThreadPool(4);
+		
+		//Cached thread pool
+		//ExecutorService executor = Executors.newCachedThreadPool();
+		
+//		for(int i = 1; i<=100; i++) {
+//			executor.execute(new WeddingCardWrap());
+//		}
+		
+		ExecutorService executor = Executors.newScheduledThreadPool(3);
+		
+		executor.schedule(new WeddingCardWrap(), 3, TimeUnit.SECONDS);
+	}
+}

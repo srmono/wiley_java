@@ -1,0 +1,8 @@
+package generics;
+
+public class GenericClass {
+	public static void main(String[] args) {
+		IntegerPrinter printer = new IntegerPrinter(27);
+		printer.print();
+	}
+}

@@ -1,0 +1,40 @@
+package JavaThreads;
+
+class Sheet{
+	public void writeln(int k) {
+		for(int i =1; i<=10; i++) {
+			System.out.println(i*k);
+		}
+	}
+}
+
+class Person1 extends Thread{
+	Sheet st;
+
+	public Person1(Sheet st) {
+		super();
+		this.st = st;
+	}
+	@Override
+	public void run() {
+		st.writeln(10);
+	}
+}
+
+class Person2 extends Thread{
+	Sheet st;
+
+	public Person2(Sheet st) {
+		super();
+		this.st = st;
+	}
+	@Override
+	public void run() {
+		st.writeln(10);
+	}
+}
+
+
+public class SynchronizationConcepts {
+
+}

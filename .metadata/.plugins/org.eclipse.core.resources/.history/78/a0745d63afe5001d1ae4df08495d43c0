@@ -1,0 +1,14 @@
+package generics;
+
+public class Printer<D> {
+	D valToPrint;
+
+	public Printer(D valToPrint) {
+		super();
+		this.valToPrint = valToPrint;
+	}
+	
+	public void print() {
+		System.out.println(valToPrint);
+	}
+}

@@ -1,0 +1,14 @@
+package generics;
+
+import java.util.ArrayList;
+
+public class GenericClass {
+	public static void main(String[] args) {
+		Printer<String> printer = new Printer("Wiley Edge");
+		printer.print();
+		
+		
+		ArrayList<Cat> cats = new ArrayList<>();
+		cats.add(new Cat())
+	}
+}

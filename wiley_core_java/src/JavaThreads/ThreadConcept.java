@@ -30,7 +30,7 @@ public class ThreadConcept {
 		T1 t1 = new T1();
 		t1.start();
 		
-		T2 t2 = new T2();
+		T2 t2 = new T2(); //runnable 
 		Thread trd = new Thread(t2);
 		trd.start();
 	}

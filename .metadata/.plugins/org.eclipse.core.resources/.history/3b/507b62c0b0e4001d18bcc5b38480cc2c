@@ -1,7 +1,0 @@
-package Patterns;
-
-public class RegexBasics {
-	public static void main(String[] args) {
-
-	}
-}

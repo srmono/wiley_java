@@ -1,0 +1,14 @@
+package generics;
+
+public class StringPrinter {
+	Double valToPrint;
+
+	public StringPrinter(Double valToPrint) {
+		super();
+		this.valToPrint = valToPrint;
+	}
+	
+	public void print() {
+		System.out.println(valToPrint);
+	}
+}

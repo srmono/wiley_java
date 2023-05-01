@@ -1,0 +1,7 @@
+package JavaThreads;
+
+public class DemonType {
+	public static void main(String[] args) {
+		
+	}
+}

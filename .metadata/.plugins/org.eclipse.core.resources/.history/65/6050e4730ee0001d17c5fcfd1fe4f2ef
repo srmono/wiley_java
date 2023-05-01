@@ -1,8 +1,0 @@
-package Wiley_core_java;
-
-public class ConstructorTypes {
-
-	public static void main(String[] args) {
-		
-	}
-}

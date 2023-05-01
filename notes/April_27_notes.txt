@@ -1,0 +1,258 @@
+Regular Expression in Java/ Locate data using patterns
+
+The regular expression in java defines a pattern for a String. Regular Expression can be used to search, edit or manipulate text. A regular expression is not language specific but they differ slightly for each language. Regular Expression in Java is most similar to Perl. Java Regex classes are present in java.util.regex package that contains three classes:
+
+- Pattern: Pattern object is the compiled version of the regular expression. Pattern class doesn’t have any public constructor and we use it’s public static method compile to create the pattern object by passing regular expression argument.
+
+Matcher: Matcher is the java regex engine object that matches the input String pattern with the pattern object created. Matcher class doesn’t have any public constructor and we get a Matcher object using pattern object matcher method that takes the input String as argument. We then use matches method that returns boolean result based on input String matches the regex pattern or not.
+
+- PatternSyntaxException: PatternSyntaxException is thrown if the regular expression syntax is not correct.
+
+Syntax
+Pattern and Matcher classes
+
+String, groups, ..
+
+
+	[] denotes a character class. 
+	() denotes a capturing group.
+
+		https://wileyedge.com/test.html?course=356
+
+pattern 	(https?):// ([^/?]) ([^?]*) (\?.*)
+
+
+find 	-> edg  \\w\\w\\w		-> true
+match   -> edg  \\w\\w\\w		-> flase
+	wiley edge
+
+
+
+^[a|A]gent (\d{3,4})$
+
+^(a|A|aa)gent \d{3,4}$
+
+
+^\w* \d{3,4}$
+
+\w? \d{3,4}$
+-------------------------------------------
+Java Multithreading
+
+main(){
+
+
+	statement1	-> 1s
+	statement2	-> 1s
+	statement3	(15 seconds)
+	statement4	-> 1s
+	statement5	-> 1s
+	.....
+}
+
+Bank -> 10 customers (each customer to address it take 1 minute)
+Single counter: just to check the balance last person need to wait more time
+(10 minutes)
+
+multiple counters (3): 3.4 + minutes
+
+---
+
+Thread?
+Task?
+Process?
+
+Thread:
+A thread is a light weight sub-process
+one program have multiple sub-process and 
+we can create thread for those sub-process 
+execute those created thread simultaneously
+
+Each thread is independent
+----------
+Multitasking
+- is process of executing multiple tasks  simultaneously
+- we use multitasking for work on multiple application simultaneously
+
+Two ways to implement Multitasking:
+
+1. Process based multitasking (OS - Level)
+	we switch one application to another application
+	each process have separate memory address
+	
+2. Thread based multitasking (Process or Program level)
+ 	switch inside the application
+	threads share the same address space
+
+-----------------
+States of Thread:
+
+New	
+	-> The thread is in new state if you create an instance of thread class but don't call start() method
+Runnable
+	-> The thread is in runnable state after invoking the start() method, 
+	   Thread scheduler has not selected to be running 
+Running ->
+	-> the thread is running state, if the scheduler has selected it
+
+Non-Runnable (Blocked)
+	-> this state when the thread is still alive, but currently not in running state
+
+Terminated
+	-> A thread is terminated or dead state when completed thread execution or call stop() method
+
+-------------------------
+
+How to create thread
+Two ways to created thread
+
+1. By extending thread class
+	- provide constructors and methods to perform operations on thread
+	- thread class implements Runnable Interface
+	- we can't extend any other class because we already extended thread class 
+
+2. By implementing Runnable Interface
+	- We can create new class which implements Runnable Interface and overide run method
+	- Runnable interface has only run() methods
+	- we have option to extend other class, because we have implemented RunnableInterface
+
+
+run()
+start()
+sleep()
+join()
+getPriority()
+setPriority()
+getName()
+setName()
+currentThread()
+getId()
+getState()
+isLive()
+suspended()
+resume()
+stop()
+
+
+--------------------
+
+Thread Scheduler in java
+- Thread scheduler only decides which thread should run
+  no guarantee that which runnable thread will be chosen 
+- 
+
+Thread priority: 1 to 10
+Three constants defined in thread class for Priority 
+	public static int MIN_PRIORITY
+	public static int MAX_PRIORITY
+	public static int NORM_PRIORITY
+
+
+Default priority: 5 (NORM_PRIORITY)
+The value of MIN_PRIORITY is 1 and the value of MAX_PRIORITY is 10
+
+public int getPriority()
+public int setPriority(int priority)
+
+
+Thread Name:- Thread-1   -   Thread Prioriy:- 5
+Thread Name:- Thread-0   -   Thread Prioriy:- 5
+Thread Name:- Thread-0   -   Thread Prioriy:- 5
+Thread Name:- Thread-1   -   Thread Prioriy:- 5
+Thread Name:- Thread-1   -   Thread Prioriy:- 5
+Thread Name:- Thread-0   -   Thread Prioriy:- 5
+
+-------------------------------
+
+
+Thread join() Method:
+
+t1
+t2
+this method waits for a thread to die
+Then only another thread get a chance to execute
+
+actual time takes by t1 is 1 second
+
+t1.join();
+t1.join(500);
+
+t2.start();
+
+
+---------------------------------------
+Thread pool 
+
+- Thread pool create a group of worker thread , 
+  waiting for the job and thread reuse many time
+- Thread pool create group of fixed size threads or dynamic thread size
+- Thread inside the thread pool is pulled out and assigned a job by service provider
+After completing the job, thread continued in the thread pool again
+- Thread pool provde better performance, it saves time , because there is no need of creating
+new thred 
+- once create thread it will not died until all queue task finished 
+
+Project manager/lead
+	dev (d1, d2, d3) + (t4)
+	test (t1, t2, t3, t4)
+
+
+Thread pool we can create in 4 ways
+
+1. fixed size  ThreadPool
+	ExecutorService executor = Executer.newFixedThreadPool(5);
+
+2. cached Threadpool (depend on the requirement)
+	ExecutorService executor = Executer.newCachedThreadPool();
+
+3  Scheduled Threadpool (execute the task after certain time delay)
+	ExecutorService executor = Executer.newScheduledThreadPool(5);
+
+
+In fixed delay execution
+
+4. Single ThreadPool 
+	ExecutorService executor = Executer.newFixedThreadPool(1);
+
+
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

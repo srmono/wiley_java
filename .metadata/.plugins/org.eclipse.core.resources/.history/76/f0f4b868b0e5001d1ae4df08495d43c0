@@ -1,0 +1,8 @@
+package generics;
+
+public class GenericClass {
+	public static void main(String[] args) {
+		Printer<String> printer = new Printer("Wiley Edge");
+		printer.print();
+	}
+}

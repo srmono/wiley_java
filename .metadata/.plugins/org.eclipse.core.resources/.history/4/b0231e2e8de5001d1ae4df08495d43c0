@@ -1,0 +1,12 @@
+package JavaThreads;
+
+import java.util.concurrent.ExecutorService;
+
+public class RequestProcessor {
+	private ExecutorService threadPool;
+	private ThreadGroup databseThreadGroup;
+	private ThreadGroup reportThreadGroup;
+	
+	
+	
+}

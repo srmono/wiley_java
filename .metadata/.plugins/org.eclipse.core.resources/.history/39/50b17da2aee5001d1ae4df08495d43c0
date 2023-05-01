@@ -1,0 +1,14 @@
+package generics;
+
+public class DoublePrinter {
+	Integer valToPrint;
+
+	public DoublePrinter(Integer valToPrint) {
+		super();
+		this.valToPrint = valToPrint;
+	}
+	
+	public void print() {
+		System.out.println(valToPrint);
+	}
+}

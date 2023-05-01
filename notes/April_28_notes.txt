@@ -1,0 +1,101 @@
+
+
+Thread Group
+
+Shutdown hook
+
+if some code we want to execute before JVM shutdown . that code we can write inside the 
+shutdown hook thread
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Java threads, thread pool, and thread groups: 
+
+
+We create a RequestProcessor 
+
+We use a thread pool with 10 threads to handle multiple requests concurrently. 
+We also create two thread groups, one for database threads and another for report generation threads. 
+When a new thread is created to process a request, 
+we set the thread's group based on the type of request.
+
+In the performDatabaseQuery and generateReport methods, we perform the actual work of the requests. We print
+
+
+RequestProcessor class that handles incoming requests.
+	processRequest 
+
+The `processRequest` method takes a Request 
+`object` and creates a new thread to process the request.
+
+The `Request` object contains the type of request (either a database query or report generation) and the data needed to perform the request.
+
+-----------------------------
+
+Demon Thread 
+
+main(){
+	t1
+	t2
+	t3
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------
+
+Deadlock is a situation where two or more threads are blocked forever, waiting for each other to release the lock or resource they hold
+
+
+
+
+
+
+
+
+In Java, a daemon thread is a type of thread that runs in the background and provides services to other threads in the system. These threads are designed to support the main application threads, and they are automatically terminated when all non-daemon threads have completed.
+
+The JVM terminates a Java program when all the non-daemon threads have finished executing. In contrast, daemon threads are not considered essential to the program's execution, so they are not required to complete their work before the JVM exits.
+
+A real-time example of a daemon thread in Java could be a garbage collector thread. The garbage collector is responsible for reclaiming unused memory, and it runs periodically in the background as a daemon thread. The garbage collector does not directly support the main program logic, but it is critical for the proper functioning of the JVM.
+
+Another example of a daemon thread in Java could be a background service that runs continuously in the background, such as a system monitor or a logging service. These types of services are designed to run indefinitely in the background and provide support to other threads in the system.
+
+Overall, daemon threads are useful for providing support to the main application threads in the system, without interfering with the application's critical logic. They are automatically terminated by the JVM when all non-daemon threads have completed, making them a useful tool for managing system resources and reducing resource consumption.
+
