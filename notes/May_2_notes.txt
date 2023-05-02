@@ -1,0 +1,186 @@
+
+
+Generics : 
+- This allows us to make type safe objects
+- Code is stable, find the errors in compile time
+
+<T>
+<K, V>
+<?>
+<K,V> T
+Method level
+
+--------------------------
+
+Collections 
+
+Advantages of Collections:
+Type Safety 
+Not Required Type casting
+Compile-time checking 
+
+Ex: -
+Generic:	ArrayList<String> list = new ArrayList<String>()
+non generic:	ArrayList list = new ArrayList()
+
+---------------------------------
+Vectors
+	similar to ArrayList, dynamic array 
+	Vector is synchronized (Thread safe)
+	Vector has many methods compare to Collection 
+	
+Stack is a child class of vector (stack )
+
+Stack<T> objs = new Stack<>();
+objs.
+
+empty()
+push()
+pop()
+peek(): get top element from the stack
+search(object o) we can search specific element index
+	add
+	remove
+	update
+--------------------------------
+
+Cursors in java : When we want to retrieve object one by one from collection 
+
+- Enumerations: 1.0
+
+
+- Interator
+	we can use iterator with any collection object, interator is universal cursor
+	Read and remove operations
+	
+ArraList al = new ArrayList();
+Iterator itr = al.iterator();
+itr.hasNext();
+itr.next();
+itr.remove()
+
+Iterator Limitations:
+	single direction cursor
+	using enumeration only read operation
+	using iterator Read and remove operations
+	add, update, or backward direction options we don't have
+
+- ListIterator
+	forward and backward direction 
+
+LinkedList<String> li = new LinkedList<>();
+List<String> li = new ArrayList<>();
+
+ListIterator<String> listr = li.listIterator();
+
+listr.hasPrevious()
+
+listr.equals("a")
+hasNext()
+set()
+remove()
+---------------------------------------
+
+Queue Interface
+- PritoryQueue
+	FIFO
+	some times we need to process objects in a queue based on priority
+	all element values store in some order, default ascending order
+	duplicates are allowes, can't store null, 
+
+- DeQueue
+- BlockingQueue
+
+	Blocking Queue interface (Thread safe)
+	its thread safe block multiple access point
+	allows duplicate, but we can't store null
+LinkedBlockingQueue
+ArrayBlockingQueue
+PriorityBlockingQueue
+
+5 tasks 
+4 tasks low priority , 5th one is imp
+
+Queue<String> aq = new PriorityQueue()
+
+
+---------------------------------------
+
+Purpose of the type
+diff between
+Iterator
+Null?
+duplicate?
+hierarchy
+
+
+Set Interface
+	child interface
+	can't contain duplicates
+	can hold null value
+	main use of set is to store unique value
+	doesn't follow insertion order
+	no new methods, we use collection methods
+
+HashSet
+	can't contain duplicates
+	add duplicates  (return false)
+	doesn't follow insertion order
+	Null insertion is possible
+	best in search operations
+	4 constructor 
+
+SortedSet
+   child interface of set
+   first()
+   last()
+
+Navigation 
+NavigableSet child interface of Sorted Set
+
+
+Comparable is an interface
+- natural ordering of objects
+- compareTo() method to compare two objects
+
+
+ vs 
+Comparator is an interface
+	Custom ordering of objects of a class
+	(specific criteria)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

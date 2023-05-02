@@ -1,0 +1,19 @@
+package collections;
+
+import java.util.HashSet;
+
+public class SetClass {
+	public static void main(String[] args) {
+		HashSet<String>  hs = new HashSet<>();
+		
+		hs.add("Java");
+		hs.add("java");
+		hs.add("java");
+		hs.add("python");
+		hs.add("javaScript");
+		hs.add("mysql");
+		
+		System.out.println(hs);
+		
+	}
+}
