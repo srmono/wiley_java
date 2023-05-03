@@ -1,8 +1,0 @@
-package Exceptions;
-
-public class FinalBlock {
-
-	public static void main(String[] args) {
-		
-	}
-}

@@ -1,8 +1,0 @@
-package StringClasses;
-
-public class StringBuilderClass {
-	public static void main(String[] args) {
-		StringBuilder sb = new StringBuilder("Wiley");
-		sb.append(" Edge");
-	}
-}

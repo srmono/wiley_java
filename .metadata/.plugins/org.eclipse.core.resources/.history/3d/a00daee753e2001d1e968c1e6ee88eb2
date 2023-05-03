@@ -1,7 +1,0 @@
-package Wiley_core_java;
-
-public class AbstractionClass {
-	public static void main(String[] args) {
-
-	}
-}

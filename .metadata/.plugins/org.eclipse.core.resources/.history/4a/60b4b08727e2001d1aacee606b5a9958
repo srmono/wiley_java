@@ -1,8 +1,0 @@
-package basics;
-
-public class LegarVars {
-	public static void main(String[] args) {
-		
-	}
-
-}

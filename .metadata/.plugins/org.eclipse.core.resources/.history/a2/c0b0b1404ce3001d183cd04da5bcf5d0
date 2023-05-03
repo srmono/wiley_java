@@ -1,8 +1,0 @@
-package IOStream;
-
-public class DataStreamClass {
-	public static void main(String[] args) {
-		FileOutputStream fout = new FileOutputStream("I:\\Training\\Wiley\\resources\\java_concepts\\wiley_core_java\\data\\data2.txt");
-	}
-
-}

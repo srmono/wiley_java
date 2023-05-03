@@ -1,9 +1,0 @@
-package Exceptions;
-
-public class ExceptionProgagation {
-	
-	public static void main(String[] args) {
-		
-	}
-
-}

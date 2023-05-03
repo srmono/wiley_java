@@ -25,28 +25,28 @@ public class RequestProcessor {
 		reportThreadGroup = new ThreadGroup("Report Threads");
 	}
 
-//	public void processRequest(Request request) {
-//		Runnable Task = new Runnable() {
-//
-//			@Override
-//			public void run() {
-//				if (request.getType() == RequestType.DATABASE_QUERY) {
-//					// set the thread to the database thread group;
-//					Thread.currentThread().setThreadGroup(databseThreadGroup);
-//					performDatabaseQuery(request);
-//
-//				} else if (request.getType() == RequestType.REPORT_GENERATION) {
-//					// set the thread to the database thread group;
-//					//Thread.currentThread().setThreadGroup(reportThreadGroup);
-//					generateReport(request);
-//				}
-//
-//			}
-//		}
+	public void processRequest(Request request) {
+		Runnable Task = new Runnable() {
+
+			@Override
+			public void run() {
+				if (request.getType() == RequestType.DATABASE_QUERY) {
+					// set the thread to the database thread group;
+					//Thread.currentThread().setThreadGroup(databseThreadGroup);
+					performDatabaseQuery(request);
+
+				} else if (request.getType() == RequestType.REPORT_GENERATION) {
+					// set the thread to the database thread group;
+					//Thread.currentThread().setThreadGroup(reportThreadGroup);
+					generateReport(request);
+				}
+
+			}
+		}
 		//submit 
 		//threadPool.submit(request);
+	}
 	
-
 	private void performDatabaseQuery(Request request) {
 		System.out.println("Processing database query request");
 	}

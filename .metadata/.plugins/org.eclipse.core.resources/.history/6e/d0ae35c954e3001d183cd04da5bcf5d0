@@ -1,9 +1,0 @@
-package IOStream;
-
-public class Student {
-	private String name;
-	private boolean gender; // true: male, false: female
-	private int age;
-	private float grade;
-
-}

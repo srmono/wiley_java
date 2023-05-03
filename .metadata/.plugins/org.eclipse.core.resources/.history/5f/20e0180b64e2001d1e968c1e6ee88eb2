@@ -1,8 +1,0 @@
-package demo_protected;
-
-public class Demo1 {
-
-	public static void main(String[] args) {
-		Atest atc = new Atest(); 
-	}
-}
