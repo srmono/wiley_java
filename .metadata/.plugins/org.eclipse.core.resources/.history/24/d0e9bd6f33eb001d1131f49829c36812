@@ -1,0 +1,7 @@
+package Streams;
+
+public class StreamsClass {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,7 +1,0 @@
-package RandomConcepts;
-
-public class CurrencyClass {
-	public static void main(String[] args) {
-
-	}
-}

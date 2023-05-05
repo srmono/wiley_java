@@ -1,0 +1,11 @@
+package lambda;
+
+@FunctionalInterface
+interface Calc{
+	//Abstract method
+	int calculate(int val);
+}
+
+public class FunctionalInterfaceClass {
+
+}

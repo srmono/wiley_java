@@ -1,7 +1,0 @@
-package RandomConcepts;
-
-public class NumberClass {
-	public static void main(String[] args) {
-
-	}
-}

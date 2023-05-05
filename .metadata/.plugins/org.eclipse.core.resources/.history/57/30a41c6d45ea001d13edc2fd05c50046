@@ -1,0 +1,23 @@
+package collections;
+
+public class EqualClass {
+	public static void main(String[] args) {
+//		int int1 = 4;
+//		int int2 = 4;
+//		
+//		if(int1 == int2) {
+//			System.out.println("The numbers are equal");
+//		} else {
+//			System.out.println("The numbers are not equal");
+//		}
+		
+		String str1 = new String("Wiley");
+		String str2 = new String("Wiley");
+		
+		if(int1 == int2) {
+			System.out.println("The numbers are equal");
+		} else {
+			System.out.println("The numbers are not equal");
+		}
+	}
+}

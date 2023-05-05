@@ -1,0 +1,41 @@
+
+
+Morning 
+
+PPT Slides
+1. Title
+2. Team info
+3. Project info
+4. Tech stack (Java Concepts applied)
+	Collections
+	Exceptions
+	String buffer/builder
+	Serialization 
+	....
+5. Project architecture diagram
+6. Project architecture description of class files and flow
+	functionalities ...
+7. Screenshots
+8. Best practices
+9. Restrospective (learnings )
+10. Next? (improvements ...)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

@@ -1,0 +1,12 @@
+package collections;
+
+import java.util.Arrays;
+
+public class UtilityClasses {
+	public static void main(String[] args) {
+		int arr[] = {5,4,6,8,3,4,2,8,9,2,3,9,1,3,2,6,5,4,3};
+		Arrays.sort(arr);
+		
+		
+	}
+}

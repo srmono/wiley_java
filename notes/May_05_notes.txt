@@ -1,0 +1,301 @@
+Today's Agenda:
+
+"Lambda Expressions
+Introduction
+ Writing Lambda Expressions
+ Functional Interfaces
+ Types of Functional Interfaces
+ Method reference
+
+Stream API
+Introduction
+Stream API with Collections
+Stream Operations"
+-----------------------------------------------
+
+Lambda Expressions
+
+Anonymous function
+	not having any name
+	not having any return type
+	not having modifier
+
+
+public void print() {
+					
+	System.out.println("This is a lambda expression");
+}
+
+ ()  -> {System.out.println("This is a lambda expression");}
+
+() -> {}
+
+Args:
+a, b
+
+(int a, int b) -> { return (a+b)}
+
+(int a) -> { return a}
+
+a -> { return (a+b)}
+
+a -> a+5
+
+
+- To enable functional programming in java
+- To make code more readable and maintainable
+- To enble parallel processing
+- JAR file size reduction
+
+
+
+
+
+-------------------------------------
+
+Functional Interfaces & Lambdas
+
+non-functional interface
+FunctionalInterface
+
+Parent interface 
+Child interface 
+-----------------------------
+Built-in Java Functional Interfaces
+
+java 8 --> lambda expressions --> anonymous function --> abstract methods --> special interfaces --> single abstract method (Functional Interfaces)
+
+Java has pre-defined or built-in functional interfaces for commonly occurring cases.
+
+Many interfaces I converted into functional interfaces using @FunctionalInterface Annotation. A few of these interfaces are as follows-
+
+Runnable - It contains only the run() method. 
+It is used to write applications that can run on a separate thread.
+
+Comparable - This interface contains only the compareTo() method. 
+The objects of the class that implements the Comparable interface can be compared the objects of the class that implements Comparable interface can be compared and sorted.
+
+ActionListener - It contains only actionPerformed() method. 
+It is responsible for handling all the action events like a mouse click on a component.
+
+Callable - It only contains the call() method. 
+This method is used to monitor the progress of a function being executed by a thread.
+
+
+Types of Functional interfaces
+Functional interfaces in Java are mainly of four types:
+
+Consumer	--> BuiltInConsumer
+Predicate
+Function
+Supplier
+
+Function
+The function type functional interface receives a single argument, processes it, and returns a value. One of the applications of this type of functional interface is taking the key from the user as input and searching for the value in the map for the given key.
+
+T means type of parameter
+R return type
+
+@FunctionalInterface
+public interface Function<T, R>{
+   R apply(T t);
+}
+
+
+@FunctionalInterface
+public interface UnaryOperator<T> extends Function<T, T>{
+   // add methods here
+}
+
+
+
+Bi-Function
+Bi-function is just like a function except it takes two arguments. Two arguments are must in Bi-function. Just like a function it also returns a value.
+
+@FunctionalInterface
+public interface BinaryOperator<T> extends BiFunction<T, T, T>{
+    // add methods here
+}
+
+
+
+-----
+
+Supplier
+The supplier functional interface in Java is much like a functional interface, the only difference is it doesn't take any arguments. On calling the supplier it simply returns a value. Supplier is a generic interface thus, it takes the type of value in <> (Angular brackets) while implementing to be returned by the get() method.
+
+
+@FunctionalInterface
+public interface Supplier<T>{
+    T get();
+}
+
+
+-------
+
+Consumer
+The Consumer functional interface in Java accepts a single gentrified argument and doesn't return any value.
+The consumer takes one generic type, the type of data it is going to take as a parameter. accept is the abstract method of the Consumer.
+
+
+@FunctionalInterface
+public interface Consumer<T>{
+    void accept(T t);
+}
+
+
+BiConsumer
+
+It takes two arguments one generic, and the other of primitive type. It also doesn't return a value
+
+
+
+----
+
+Predicate
+The predicate functional interface in Java takes a single argument and returns a boolean value.
+
+It is usually used in filtering values from the collection. It is also a specialization of a Function that takes a gentrified argument or a single argument and returns a boolean.
+
+The predicate is much like a metal detecting machine. It tests each object. If the object is detected to be metal, it sends signals in the form of sound or light, i.e. returns true. If the object is not metal, it simply checks another object or returns false.
+
+Predicate interface in Java has 3 default methods and(),negate(), and or and 1 static method isEqual() other than abstract method test.
+
+
+public interface Predicate<T>{
+    boolean test(T t);
+}
+
+-------------------------------------------------------------------------
+
+Java Method Reference
+
+- Java provides a new feature called method reference in Java 8. 
+- Method reference is used to refer method of functional interface. 
+- It is compact and easy form of lambda expression. 
+- Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference.
+
+Types of Method References
+There are following types of method references in java:
+
+1. Reference to a static method.
+	class::staticMethod
+2. Reference to an instance method.
+	object::instanceMethod
+3. Reference to a constructor.
+	
+
+
+***Reference to a Static Method
+
+You can refer to static method defined in the class
+
+we have defined a functional interface and referring a static method to it's functional method say() 
+
+
+interface Sayable{  
+    void say();  
+}  
+
+interface GetInfo{
+	Info getMsg(String str);
+}
+
+class Info{
+    Info(String msg){
+	System.out.println(msg)
+   }
+}
+
+public class MethodReference {  
+
+    public static void main(String[] args) {
+
+	GetInfo info = Info:new;
+	info.getMsg("my message");
+	
+  
+	MethodReference mt = new MethodReference();
+	Sayable isv = mt::hello;
+	isv.say();
+
+	new MethodReference()::hello
+	
+        // Referring static method  
+        Sayable sayable = MethodReference::saySomething;  //class::method
+        // Calling interface method  
+        sayable.say();  
+	/// thread
+	Thread t1 = new Thread(MethodReference::processSomething);
+	t1.start();
+    }  
+}  
+
+***
+
+
+
+----------------------------------------------
+Streams in Java
+
+Java is a programming language used commonly throughout the world of software development. As of 2013, over 3 billion devices used Java, with the language being used primarily in web applications and Android applications.
+
+Nonetheless, people complain about the language being more verbose and syntactically demanding than its peers (such as Ruby and Python.) Some even say it is an outdated language.
+
+Luckily, Java 8 brought many refreshing changes designed to mold Java into something more simple and modern. Better yet, at the time of writing, version 9 is coming with more changes soon.
+
+One of the key changes is the Stream interface which relies on a new Java component, lambda expressions.
+
+This guide introduces lambda expressions and the Stream interface and highlights the most common Stream operations on collections.
+
+
+Declarative vs Functional
+It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of statements. 
+
+Ex: - SQL and XSLT are two well-known examples of declarative programming. Markup languages such as HTML and CSS are declarative too, 
+
+Functional programming is a form of declarative programming that expresses a computation directly as pure functional transformation of data.
+(Functional programming is a form of declarative programming.)
+
+Ex:-  SQL's case is a great example of the functional way of programming, which is a restricted subset of Declarative programming in which the desired computation is specified by composing functions.
+
+Functions are things that accept inputs and return outputs (eg. case, sum()…)
+
+Inperating Programming:
+mperative programming is a software development paradigm where functions are implicitly coded in every step required to solve a problem. In imperative programming, every operation is coded and the code itself specifies how the problem is to be solved, which means that pre-coded models are not called on.
+
+
+
+
+
+
+
+week3_Assignments packages
+
+Task:-
+Create Students class
+	id, name, problems_solved, grade, ...
+
+Create list of students
+
+Apply stream on students
+
+filter the students based on the number of problems solved
+update the grade
+sort
+top 5 students by grade and number of problems solved
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+package lambda;
+
+public class LambdaClass {
+
+	static void printThing(Printable thing) {
+		thing.print();
+	}
+
+	public static void main(String[] args) {
+
+		//Product myProd = new Product();
+		// myProd.print();
+
+		// printThing(myProd);
+//		printThing(
+//				  () {
+//					
+//					System.out.println("This is a Product Class that implements printable interface");
+//					
+//				}
+//				);
+
+		//printThing(() -> System.out.println("This is a lambda expression"));
+		
+		
+		
+		Printable lambaPrinciple = () -> System.out.println("This is a lambda expression");
+		printThing(lambaPrinciple);
+		
+		System.out.println(lambaPrinciple);
+	}
+
+}

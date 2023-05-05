@@ -1,7 +1,0 @@
-package IOStream;
-
-public class CharacterStreamClass {
-	public static void main(String[] args) {
-
-	}
-}

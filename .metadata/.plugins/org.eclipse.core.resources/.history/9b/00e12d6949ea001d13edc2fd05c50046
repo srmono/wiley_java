@@ -1,0 +1,10 @@
+package collections;
+
+import java.util.ArrayList;
+
+public class CustomArrayList extends ArrayList {
+
+	public static void main(String[] args) {
+		
+	}
+}

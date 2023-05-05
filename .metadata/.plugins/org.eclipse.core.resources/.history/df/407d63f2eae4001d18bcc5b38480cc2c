@@ -1,8 +1,0 @@
-package JavaThreads;
-
-public class RishavWeddingCard {
-	public static void main(String[] args) {
-		
-	}
-
-}

@@ -1,0 +1,10 @@
+package lambda;
+
+@FunctionalInterface
+public interface Child extends Parent {
+	public void sayHello();
+	
+	default void sayHi() {
+		
+	}
+}

@@ -1,7 +1,0 @@
-package RandomConcepts;
-
-public class ConsoleClass {
-	public static void main(String[] args) {
-
-	}
-}

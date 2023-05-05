@@ -1,0 +1,93 @@
+Utility Classes in collection
+
+helper classes 
+1. Arrays Class
+2. Collections class
+
+sort()
+
+---------------------------
+
+Map
+- The Map is an interface, and HashMap is a class of the Java collection framework.
+- Map child interfaces (SortedMap, NavigableMap)
+- Classes (HashMap, WeakhashMap, IdentityHashMap, LinkedHashMap, TreeMap)
+- The Map interface can be implemented by using its implementing classes. In comparison, the HashMap class implements the Map interface.
+- The Map contains unique key-pair values. But, the HashMap can hold duplicate values.
+- The Map does not allow null values. But the HashMap can have one null key and multiple values.
+- The Map has two implementations, which are HashMap and TreeMap. Whereas HashMap implements Map interface and extends AbstractMap class.
+- There is no difference between the Map and HashMap objects.
+- doesn't allow any order, hold unique key, and duplicate values
+- put()
+
+LinkedhashMap
+
+- child class of HashMap
+- insertion order follows
+
+
+
+Map (synchronized) threadsafe
+
+- 3 sync.. classes
+- HashTable apply lock at method level
+- SynchronizedMap   	apply lock at object level
+- ConcurrentHashMap  	apply lock at block level , don't allow any null key or value
+
+--------------------
+TreeMap 
+
+doesn't follow insertion order
+While forming tree internally it will keep small/less value on the Left side, higher value it will keep on the right side
+-----------------------------------
+
+==  equal()
+
+-------------------------------------
+- List and set?
+- ArrayList vs LinkedList?
+- List object creation
+	ArrayList<> al = new ArrayList<>();
+	List<> alist = new ArrayList<>();
+
+- final List<> alist = new ArrayList<>();// 
+
+	add	- yes
+	modify  -  no
+
+- Write custom arrayList where i don't want to allow duplicate?
+
+final name = "venkat"  ?
+
+final names = ["wiley", "venkat", "wileyedge"]
+
+names = new HashMap();
+
+name
+
+
+
+String.class
+
+class String{
+
+this?
+
+equals(object o){
+}
+
+}
+
+Multi Comparing using compartor scenario
+
+
+- iterator fail fast anf fail safe?
+
+- A iterator which will fail fast when we do any modification while iterating a collection is called fail fast iterator.
+(Ex:- ArrayList, HashMap and Vector)
+
+- an iterator which allow us to modify in the middle of iterating a collection is fall non-fail-fast iterator 
+(Ex: - CopyOnWriteArrayList, CopyOnWriteArraySet, ConcurrentHashMap)
+
+
+System.out.println(list);

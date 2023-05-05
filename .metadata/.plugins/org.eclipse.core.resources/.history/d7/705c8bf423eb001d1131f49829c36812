@@ -1,0 +1,20 @@
+package lambda;
+
+import java.util.HashMap;
+
+public class BuiltInFunction {
+	//to store employees info
+	private static HashMap<Integer, String> Employee = new HashMap<>();
+	
+	public static void add(String name, int ID) {
+		if(!Employee.containsKey(ID)) {
+			Employee.put(ID, name);
+		}else 
+			System.out.println("Employee already exist..!");
+		
+	}
+	
+	
+	
+
+}
