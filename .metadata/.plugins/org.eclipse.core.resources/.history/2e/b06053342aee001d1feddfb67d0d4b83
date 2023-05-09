@@ -1,0 +1,15 @@
+package data_structures;
+
+// Recursion is the technique of function call itself
+// why?
+
+// factorial
+//5 * 5-1 (4)
+//20 * 4-1 (3)
+
+
+public class RecursiveClass {
+	public static void main(String[] args) {
+		
+	}
+}

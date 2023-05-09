@@ -1,9 +1,0 @@
-package JavaThreads;
-
-
-
-public class ThreadGroup {
-	public static void main(String[] args) {
-		 
-	}
-}

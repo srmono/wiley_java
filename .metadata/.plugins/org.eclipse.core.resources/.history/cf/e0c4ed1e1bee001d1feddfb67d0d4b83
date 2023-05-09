@@ -1,0 +1,27 @@
+package data_structures;
+
+// Tree traversal in java
+
+class Node{
+	int item;
+	Node left, right;
+	
+	public Node(int key) {
+		item = key;
+		left = right = null;
+	}
+}
+
+public class BinaryTree {
+	//Root of the Binary Tree
+	Node root;
+	
+	public BinaryTree() {
+		root = null;
+	}
+	
+	//Postorder traversal
+	//inorder traversal
+	//pre order traversal
+
+}

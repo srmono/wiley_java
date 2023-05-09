@@ -1,0 +1,18 @@
+package data_structures;
+
+//Checking if the binary tree is a complete binary tree or not
+
+//Node creation
+class NodeTwo{
+	int data;
+	NodeOne left, right;
+	
+	public NodeOne() {
+		// TODO Auto-generated constructor stub
+	}
+}
+
+
+public class CompleteBinaryTree {
+
+}

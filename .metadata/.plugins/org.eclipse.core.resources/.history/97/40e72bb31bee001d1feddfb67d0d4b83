@@ -1,0 +1,44 @@
+package data_structures;
+
+// Tree traversal in java
+
+class Node {
+	int item;
+	Node left, right;
+
+	public Node(int key) {
+		item = key;
+		left = right = null;
+	}
+}
+
+public class BinaryTree {
+	// Root of the Binary Tree
+	Node root;
+
+	public BinaryTree() {
+		root = null;
+	}
+
+	// Postorder traversal
+	void postOrder(Node node) {
+		if (node == null)
+			return;
+
+		// Traverse Left
+		postOrder(node.left);
+		// Traverse right
+		postOrder(node.right);
+		// Traverse root
+		System.out.println(node.item + "-->");
+	}
+	
+	// inorder traversal
+	
+	// pre order traversal
+
+	public static void main(String[] args) {
+
+	}
+
+}

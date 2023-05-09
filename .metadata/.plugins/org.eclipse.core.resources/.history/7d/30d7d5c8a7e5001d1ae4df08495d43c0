@@ -1,7 +1,0 @@
-package JavaThreads;
-
-public class InterCommunication {
-	public static void main(String[] args) {
-
-	}
-}

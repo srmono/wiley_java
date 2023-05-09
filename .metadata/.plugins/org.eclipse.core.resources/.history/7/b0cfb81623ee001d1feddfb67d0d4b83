@@ -1,0 +1,21 @@
+package data_structures;
+
+//check the given tree is full binaryTree or not
+
+
+class NodeClass{
+	int data;
+	NodeClass leftChild, rightChild;
+	
+	public NodeClass(int item) {
+		data = item;
+		leftChild = rightChild = noll;
+	}
+}
+
+public class FullBinaryTree {
+	public static void main(String[] args) {
+		
+	}
+
+}

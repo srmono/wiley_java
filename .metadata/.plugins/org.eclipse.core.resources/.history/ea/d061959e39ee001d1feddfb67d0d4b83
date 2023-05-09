@@ -1,0 +1,16 @@
+package data_structures;
+
+class NodeThree{
+	int data;
+	NodeThree left, right;
+	
+	NodeThree(int d) {
+		data = d;
+		left = right = null;
+	}
+}
+
+public class BalancedTree {
+	
+
+}

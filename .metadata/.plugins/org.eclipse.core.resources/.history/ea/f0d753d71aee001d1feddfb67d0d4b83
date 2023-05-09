@@ -1,0 +1,12 @@
+package data_structures;
+
+// Tree traversal in java
+
+class Node{
+	
+}
+
+public class BinaryTree {
+	
+
+}

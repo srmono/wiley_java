@@ -1,0 +1,59 @@
+
+Array
+Linked List
+Stack
+Queue
+
+Tree
+Graph
+Binary Tree & BST
+Heap
+Hashing
+Greedy algorithms 
+Divide and conquer algorithms 
+Dynamic programming algorithms 
+Practical Application of each technique 
+
+Introduction to Code Optimization
+Need & Application of Code optimization Technique
+Code Optimization Techniques
+- Compile Time Evaluation
+- Common sub-expression elimination
+- Dead Code Elimination
+- Code Movement
+- Strength Reduction
+
+
+
+
+
+
+
+
+
+data -> database 
+
+write a query get the data  -> 30 mins
+logic -> 30 
+display -->  30 mins 
+
+30 mins extra
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

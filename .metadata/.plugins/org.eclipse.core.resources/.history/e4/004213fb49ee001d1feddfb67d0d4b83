@@ -1,0 +1,12 @@
+package data_structures;
+
+//Binary search tree operations
+
+public class BinarySearchTree {
+	class Node{
+		int key;
+		Node left, right;
+		
+	}
+
+}

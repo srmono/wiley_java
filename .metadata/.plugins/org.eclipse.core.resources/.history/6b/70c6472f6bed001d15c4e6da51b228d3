@@ -1,0 +1,24 @@
+package data_structures;
+
+class LinkedList{
+	Node head;
+	
+	static class Node{
+		int value;
+		Node next;
+		
+		public Node(int d) {
+			value = d;
+			next = null;
+		}
+	}
+	
+}
+
+public class LinkedListClass {
+	
+	public static void main(String[] args) {
+
+	}
+
+}

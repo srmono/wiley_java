@@ -1,0 +1,30 @@
+package data_structures;
+
+
+class LinkedList{
+	//Creating a Node
+	Node head;
+	
+	static class Node{
+		int value;
+		Node next;
+		
+		public Node(int d) {
+			value = d;
+			next = null;
+		}
+	}
+	
+}
+public class LinkedListClass {
+	
+	
+	public static void main(String[] args) {
+		
+		LinkedList linkedList = new LinkedList();
+		
+		linkedList.head = new Node(1);
+	}
+	
+
+}

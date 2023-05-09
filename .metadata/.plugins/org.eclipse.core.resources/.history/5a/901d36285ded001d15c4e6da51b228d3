@@ -1,0 +1,13 @@
+package data_structures;
+
+public class StackClass {
+	private int arr[];
+	private int top;
+	private int capacity;
+	
+	
+	
+	public static void main(String[] args) {
+
+	}
+}

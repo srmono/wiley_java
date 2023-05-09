@@ -1,0 +1,7 @@
+package data_structures;
+
+//Binary search tree operations
+
+public class BinarySearchTree {
+
+}

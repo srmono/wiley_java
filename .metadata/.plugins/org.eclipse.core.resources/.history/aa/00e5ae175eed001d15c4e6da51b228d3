@@ -1,0 +1,31 @@
+package data_structures;
+
+public class StackClass {
+	private int arr[];
+	private int top;
+	private int capacity;
+	
+	//Create a stack
+	StackClass(int size){
+		arr = new int[size];
+		capacity = size; //5
+		top = -1;
+	}
+	
+	public void push(int x) {
+		if(isFull()) {
+			System.out.println("Stack is overflown , programming is terminated");
+			System.exit(1);
+		}
+		System.out.println("Inserting " + );
+		arr[++top] = x;
+	}
+	
+	public Boolean isFull() {
+		return top == capacity -1; // true or false
+	}
+	
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,28 @@
+package data_structures;
+
+class NodeThree{
+	int data;
+	NodeThree left, right;
+	
+	NodeThree(int d) {
+		data = d;
+		left = right = null;
+	}
+}
+
+//Calculate height
+class Height {
+	int height = 0;
+}
+
+public class BalancedTree {
+	Node root;
+	
+	//Check height balance
+	boolean checkHeightBalance() {
+		
+		
+		return false;
+	}
+
+}

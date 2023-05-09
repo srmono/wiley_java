@@ -1,0 +1,33 @@
+package data_structures;
+
+public class LinkedListClass {
+
+	Node head;
+
+	static class Node {
+		int value;
+		Node next;
+
+		public Node(int d) {
+			value = d;
+			next = null;
+		}
+	}
+
+	public static void main(String[] args) {
+
+		LinkedListClass linkedList = new LinkedListClass();
+
+		//Assign the value
+		linkedList.head = new Node(1);
+		Node second = new Node(2);
+		Node third = new Node(3);
+		
+		while() {
+			
+		}
+		
+		
+	}
+
+}

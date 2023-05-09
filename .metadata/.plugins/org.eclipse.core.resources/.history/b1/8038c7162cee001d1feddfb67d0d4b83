@@ -1,0 +1,40 @@
+package data_structures;
+
+public class PerfectBinaryTree {
+	
+	static class Node{
+		int key;
+		Node left, right;
+	}
+	
+	//Calculate the depth
+	static int depth(Node node) {
+		int d = 0;
+		while(node != null) {
+			d++;
+			node = node.left;
+		}
+		return d;
+	}
+	
+	// check if the given tree is perfect binary tree
+	static boolean is_perfect() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
