@@ -1,7 +1,0 @@
-package collections;
-
-public class CollectionNeed {
-	public static void main(String[] args) {
-
-	}
-}

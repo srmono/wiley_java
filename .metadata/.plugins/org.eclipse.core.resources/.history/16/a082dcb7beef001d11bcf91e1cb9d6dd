@@ -1,0 +1,11 @@
+package data_structures;
+import java.util.*;
+
+public class HashTableClass {
+
+	public static void main(String[] args) {
+		HashTable ht = new HashTable();
+		
+		
+	}
+}

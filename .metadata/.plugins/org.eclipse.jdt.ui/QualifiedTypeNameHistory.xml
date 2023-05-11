@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.Writer"/>
-    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
-    <fullyQualifiedTypeName name="java.io.Console"/>
-    <fullyQualifiedTypeName name="com.sun.source.doctree.SerialDataTree"/>
-    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
-    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
-    <fullyQualifiedTypeName name="java.math.RoundingMode"/>
     <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
@@ -60,4 +52,12 @@
     <fullyQualifiedTypeName name="data_structures.LinkedList"/>
     <fullyQualifiedTypeName name="data_structures.LinkedList.Node"/>
     <fullyQualifiedTypeName name="java.net.SecureCacheResponse"/>
+    <fullyQualifiedTypeName name="data_structures.BinaryTree"/>
+    <fullyQualifiedTypeName name="data_structures.FullBinaryTree"/>
+    <fullyQualifiedTypeName name="data_structures.NodeClass"/>
+    <fullyQualifiedTypeName name="data_structures.CompleteBinaryTree"/>
+    <fullyQualifiedTypeName name="data_structures.NodeTwo"/>
+    <fullyQualifiedTypeName name="data_structures.Height"/>
+    <fullyQualifiedTypeName name="data_structures.BalancedTree"/>
+    <fullyQualifiedTypeName name="data_structures.NodeThree"/>
 </qualifiedTypeNameHistroy>

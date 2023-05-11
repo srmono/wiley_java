@@ -9,6 +9,7 @@ Graph
 Binary Tree & BST
 Heap
 Hashing
+
 Greedy algorithms 
 Divide and conquer algorithms 
 Dynamic programming algorithms 
@@ -38,6 +39,26 @@ logic -> 30
 display -->  30 mins 
 
 30 mins extra
+
+
+
+
+
+
+
+
+------------------
+count number of  nodes
+
+- top view
+- I face problem in solving problem where we have to find if TWO TREE are equal, How to traversal  in such case.
+- construct tree from two given traversals
+- level order traversal
+- height of the tree
+- depth of the tree
+- lowest common ancestor
+- Vertical order traversal
+
 
 
 

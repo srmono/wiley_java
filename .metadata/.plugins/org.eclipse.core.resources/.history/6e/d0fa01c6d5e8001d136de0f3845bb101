@@ -1,7 +1,0 @@
-package collections;
-
-public class SetClasses {
-	public static void main(String[] args) {
-		
-	}
-}
