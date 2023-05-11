@@ -1,0 +1,35 @@
+package data_structures;
+
+import java.util.Arrays;
+
+public class DijkstraAlgorithm {
+	public static void main(String[] args) {
+		int[][] graph = {
+				{0, 4, 2, 0, 0},
+				{1, 0, 1, 5, 0},
+				{2, 1, 0, 8, 10},
+				{0, 5, 8, 0, 2},
+				{0, 0, 10, 2, 0}
+		};
+		
+		int source = 0; // source vertex
+		int[] distances = dijkstra(graph, source);
+	}
+
+	private static int[] dijkstra(int[][] graph, int source) {
+		int n = graph.length;
+		int[] distances = new int[n];// array to store the shortest distances
+		boolean[] visited = new boolean[n];// Array to track visited vertices
+		
+		Arrays.fill(distances, Integer.MAX_VALUE);
+		distances[source] = 0;
+		
+		for() {
+			
+		}
+		
+		
+		
+		return null;
+	}
+}
