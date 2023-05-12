@@ -1,0 +1,9 @@
+package optimization;
+
+public class DefineClass {
+	private Object DefiineClass = new Object();
+	
+	public static void main(String[] args) {
+
+	}
+}

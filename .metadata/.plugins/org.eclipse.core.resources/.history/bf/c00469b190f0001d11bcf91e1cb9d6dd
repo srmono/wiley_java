@@ -1,0 +1,12 @@
+package optimization;
+
+public class DeadCodeElimination {
+	
+	public void printOperation(int value) {
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+}

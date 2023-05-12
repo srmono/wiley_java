@@ -27,7 +27,8 @@ public class LcaBst {
     }
 
     public static void main(String[] args) {
-        /*
+        
+    	/*
                     6
                    / \
                   2   8
@@ -36,6 +37,7 @@ public class LcaBst {
                   / \
                  3  5
         */
+    	
         TreeNode root = new TreeNode(6);
         root.left = new TreeNode(2);
         root.right = new TreeNode(8);

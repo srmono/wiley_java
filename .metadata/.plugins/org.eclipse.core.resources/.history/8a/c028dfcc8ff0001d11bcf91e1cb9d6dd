@@ -1,0 +1,13 @@
+package optimization;
+
+public class CommonSubExpression {
+	
+	public int calculate(int x, int y) {
+		
+		return x;
+	}
+	
+	public static void main(String[] args) {
+
+	}
+}

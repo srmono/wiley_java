@@ -1,0 +1,10 @@
+package optimization;
+
+//String concatenation creates a new String object each time it is used
+// which can ineffieient ofr large string operations, instead you cna use string Builder
+
+public class StringOptimize {
+public static void main(String[] args) {
+	
+}
+}

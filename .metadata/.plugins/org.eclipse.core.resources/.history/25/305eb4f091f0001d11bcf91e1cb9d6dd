@@ -1,0 +1,9 @@
+package optimization;
+
+public class StrengthReduction {
+	public static void main(String[] args) {
+
+	}
+	
+	
+}

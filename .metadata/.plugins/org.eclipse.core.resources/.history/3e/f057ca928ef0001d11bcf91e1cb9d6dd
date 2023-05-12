@@ -1,0 +1,13 @@
+package optimization;
+
+
+public class CompileTimeEvaluation {
+	
+	public static final int MAX_SIZE = 100;
+	public static final int SUM = 100;
+	
+	
+	public static void main(String[] args) {
+	 	
+	}
+}

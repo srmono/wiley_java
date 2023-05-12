@@ -1,0 +1,7 @@
+package optimization;
+
+public class DefineClass {
+public static void main(String[] args) {
+	
+}
+}

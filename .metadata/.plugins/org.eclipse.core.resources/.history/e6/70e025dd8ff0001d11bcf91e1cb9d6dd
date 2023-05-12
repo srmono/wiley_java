@@ -1,0 +1,15 @@
+package optimization;
+
+public class CommonSubExpression {
+
+	public int calculate(int x, int y) {
+
+		int result1 = (x * x) + (3 * x) - (2 * y) + 3;
+
+		return x;
+	}
+
+	public static void main(String[] args) {
+
+	}
+}
