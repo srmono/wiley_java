@@ -2,11 +2,6 @@ package data_structures;
 
 import java.util.Arrays;
 
-//A real-time example of a dynamic programming algorithm is the problem of 
-//finding the shortest path in a weighted graph, commonly known as the "Shortest Path" problem. 
-//One of the most popular algorithms to solve this problem is
-//Dijkstra's algorithm, which utilizes dynamic programming principles.
-
 public class DijkstraAlgorithm {
 	public static void main(String[] args) {
 		int[][] graph = { { 0, 4, 2, 0, 0 }, { 1, 0, 1, 5, 0 }, { 2, 1, 0, 8, 10 }, { 0, 5, 8, 0, 2 },
@@ -57,20 +52,3 @@ public class DijkstraAlgorithm {
 		return minVertex;
 	}
 }
-
-/*
-In this example, we have a weighted graph represented by the graph matrix. 
-The dijkstra method implements Dijkstra's algorithm using dynamic programming principles to 
-find the shortest distances from a given source vertex to all other vertices in the graph.
-
-The algorithm maintains an array distances to store the shortest distances from the source vertex. 
-It starts with initializing all distances to infinity except for the source vertex, 
-which is set to 0. It also maintains a visited array to track the visited vertices.
-
-The algorithm iteratively selects the vertex with 
-the minimum distance from the distances array that has not been visited yet. 
-It then updates the distances of its neighboring vertices if a shorter path is found. 
-This process continues until all vertices have been visited or the shortest distances have been determined.
-
-The findMinVertex method helps find the vertex with the minimum distance among the unvisited vertices.
-*/

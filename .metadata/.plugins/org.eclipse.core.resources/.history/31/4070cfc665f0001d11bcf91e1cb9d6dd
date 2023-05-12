@@ -1,0 +1,28 @@
+package data_structures;
+
+import java.util.HashMap;
+
+//In Java, the search operation in a hash-based data structure, such as a HashMap or HashSet, involves using the hash code of the key to locate the corresponding entry or element.
+//
+//Let's take the example of a HashMap to understand how the search operation works:
+
+public class HashSearch {
+	public static void main(String[] args) {
+		HashMap<String, Integer> hashMap = new HashMap<>();
+
+		// Adding key-value pairs to the HashMap
+		hashMap.put("John", 25);
+		hashMap.put("Alice", 30);
+		hashMap.put("Bob", 35);
+		hashMap.put("Mary", 28);
+
+		// Searching for a key
+		String key = "Bob";
+		if (hashMap.containsKey(key)) {
+			int value = hashMap.get(key);
+			System.out.println("Value for key '" + key + "' found: " + value);
+		} else {
+			System.out.println("Key '" + key + "' not found.");
+		}
+	}
+}
