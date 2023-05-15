@@ -1,7 +1,0 @@
-package lambda;
-
-public interface Printable {
-	//void print(String Prefix , String suffix); // abstract 
-	String print(String suffix); // abstract
-	//void getName();
-}

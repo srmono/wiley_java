@@ -1,6 +1,0 @@
-package collections;
-
-public class GeniusStudent {
-	private int id;
-	private String name;
-}

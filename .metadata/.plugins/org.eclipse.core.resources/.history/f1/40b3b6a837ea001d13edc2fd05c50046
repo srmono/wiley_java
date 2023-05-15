@@ -1,7 +1,0 @@
-package collections;
-
-public class MapClasses {
-public static void main(String[] args) {
-	
-}
-}

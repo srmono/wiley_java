@@ -1,7 +1,0 @@
-package collections;
-
-public class TreeMapClass {
-	public static void main(String[] args) {
-
-	}
-}

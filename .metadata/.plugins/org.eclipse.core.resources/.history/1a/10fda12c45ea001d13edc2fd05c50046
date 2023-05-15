@@ -1,7 +1,0 @@
-package collections;
-
-public class EqualClass {
-	public static void main(String[] args) {
-		
-	}
-}
