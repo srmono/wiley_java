@@ -1,3 +1,4 @@
+-- Modify Data: 
 -- INSERT –                use various forms of the INSERT statement to insert data into a table.
 -- INSERT Multiple Rows –  insert multiple rows into a table.
 -- INSERT INTO SELECT –    insert data into a table from the result set of a query.
@@ -9,8 +10,6 @@
 -- DELETE JOIN –           delete data from multiple tables.
 -- REPLACE –               how to insert or update data depends on whether data exists in the table or not.
 -- Prepared Statement –    how to use the prepared statement to execute a query
-
-
 
 -- 
 
