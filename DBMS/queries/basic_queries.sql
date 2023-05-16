@@ -65,8 +65,7 @@ SELECT
     jobTitle
 FROM
     employees;
-
-
+    
 SELECT * 
 FROM employees;
 
