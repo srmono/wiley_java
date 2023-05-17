@@ -6,3 +6,4 @@
 -- CHECK constraint         – How to create CHECK constraints to ensure data integrity.
 -- DEFAULT                  – How to set a default value for a column using the DEFAULT constraint.
 -- CHECK constraint emulation  – if you use MySQL 8.0.15 or earlier version, you can emulate CHECK constraints using views or triggers.
+
