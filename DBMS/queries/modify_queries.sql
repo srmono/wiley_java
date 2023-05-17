@@ -10,7 +10,6 @@
 -- DELETE JOIN –           delete data from multiple tables.
 -- REPLACE –               how to insert or update data depends on whether data exists in the table or not.
 -- Prepared Statement –    how to use the prepared statement to execute a query
-
 -- 
 
 CREATE TABLE IF NOT EXISTS tasks (
@@ -22,6 +21,10 @@ CREATE TABLE IF NOT EXISTS tasks (
     description TEXT,
     PRIMARY KEY (task_id)
 );
+
+INSERT INTO 
+	tasks(title, priority, start_date)
+VALUES("TASK1", DEFAULT, CURRENT_DATE() ); --YYYY-MM-DD
 
 
 
@@ -40,8 +43,72 @@ VALUES
 	('AI for Marketing','2019-08-01','2023-02-31'),
 	('ML for Sales','2019-05-15','2023-01-20');
 
+SHOW VARIABLES LIKE 'max_allowed_packet';
 
----------------------------------
+SET GLOBAL max_allowed_packet=size;
+
+---------
+-- INSERT ON DUPLICATE KEY UPDATE 
+
+CREATE TABLE devices(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100)
+)
+
+INSERT INTO devices(name)
+VALUES('Rourter F1'),('Switch 1'),('Switch 2');
+
+
+INSERT INTO devices(id, name)
+VALUES(4,'Printer')
+ON DUPLICATE KEY UPDATE name = "My Printer";
+
+--------------------
+-- INSERT IGNORE -> warning - 1062
+-- INSERT STRICT is default , error - 1406
+
+CREATE TABLE subscribers(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT NULL UNIQUE
+)
+
+INSERT INTO subscribers(email)
+VALUES('venkat.bvs@gmail.com')
+
+INSERT INTO subscribers(email)
+VALUES('venkat.bvs@gmail.com'), ('venkat.s@gmail.com');
+
+INSERT IGNORE INTO subscribers(email)
+VALUES('venkat.bvs@gmail.com'), ('venkat.s@gmail.com');
+
+------------------------------------------------- 
+
+-- UPDATE 
+
+select firstname, lastname, email from employees where employeeNumber = 1056;
+
+UPDATE employees 
+SET email = "mary@gmail.com"
+where employeeNumber = 1056;
+
+-- update multiple values
+UPDATE employees 
+SET 
+    email = "mary@gmail.com",
+    lastName = "Paterson"
+where employeeNumber = 1056;
+
+
+-- update and replace values
+UPDATE employees 
+SET 
+    email = REPLACE(email,'@classicmodelcars.com', '@wileyedge.com')
+where 
+    jobTitle = 'Sales Rep' AND 
+    officeCode = 0;
+
+
+-------------------------------------------------
 CREATE TABLE suppliers (
     supplierNumber INT AUTO_INCREMENT,
     supplierName VARCHAR(50) NOT NULL,
@@ -120,6 +187,20 @@ VALUES('Venkat', 1, 50000),
       ('Riti Rathore', 2, 45000),
       ('Sachin Kumar', 3, 55000);
 
+-- Adjust the salary of employees based on their performance
+
+UPDATE employees
+    INNER JOIN 
+        merits ON employees.per = merits.performance
+SET
+    salary = salary + salary * percentage
+
+
+
+
+
+
+
 
 
 
@@ -141,6 +222,8 @@ INSERT INTO t2(id,ref) VALUES('A',1),('B',2),('C',3);
 
 
 -- MySQL ON DELETE CASCADE
+-- ON DELETE CASCADE referential action for a foreign key to delete data from multiple related tables
+
 
 /* If we have two tables:buildings and rooms . In this database model,
 each building has one or many rooms. However, 
@@ -219,7 +302,9 @@ VALUES('New York',8008278),
 -- MySQL prepared statement to make your queries execute faster and more secure.
 
 /* Prior MySQL version 4.1, a query is sent to the MySQL server in the textual format. 
+
 In turn, MySQL returns the data to the client using textual protocol. 
+
 MySQL has to fully parse the query and transforms 
 the result set into a string before returning it to the client.
 
@@ -229,6 +314,8 @@ To address this issue, MySQL added a new feature called prepared statement since
 The prepared statement takes advantage of client/server binary protocol. 
 It passes the query that contains placeholders (?) to the MySQL Server
 */
+
+
 SELECT * 
 FROM products 
 WHERE productCode = ?;
@@ -247,6 +334,8 @@ WHERE productCode = ?;
 --Execution flow:
 
     PREPARE -> EXECUTE -> DEALLOCATE PREPARE
+
+
 
 
 

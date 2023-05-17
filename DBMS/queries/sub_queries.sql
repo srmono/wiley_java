@@ -352,7 +352,7 @@ WHERE NOT EXISTS (
     WHERE 
         orders.customerNumber = customers.customerNumber
     );
-
+---------------------------------------------------------------------------------------------
 -- MySQL DELETE EXISTS 
 -- Archiving the customer data is to delete the customers that exist in 
     -- the customers_archive table from the customers table
@@ -364,16 +364,22 @@ WHERE EXISTS(
     WHERE a.customerNumber = customers.customerNumber
 );
 
--- IN vs EXISTS
+------------------------------------------------------------------------------------------------
+-- MySQL EXISTS operator vs. IN operator
+-- find the customer who has placed at least one order, you can use the IN operator
 
 SELECT 
-    customerNumber,
+    customerNumber, 
     customerName
 FROM
-    customers 
-WHERE customerNumber IN (
-    SELECT customerNumber FROM orders
-);
+    customers
+WHERE
+    customerNumber IN (
+        SELECT 
+            customerNumber
+        FROM
+            orders);
+            
 ------------
 SELECT 
     customerNumber,
