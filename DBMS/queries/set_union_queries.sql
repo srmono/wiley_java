@@ -83,6 +83,21 @@ INSERT INTO t2 VALUES (2),(3),(4);
 +--------------------+ 
 
 -- differentiate between employees and customers, you can add a column
+
+SELECT
+    CONCAT(firstName, ' ', lastName) fullname,
+    'Employee' as contactType
+FROM
+    employees 
+UNION 
+SELECT 
+    CONCAT(contactFirstName, ' ', contactLastName),
+    'Customer' AS contactType
+FROM 
+    customers
+ORDER BY 
+    fullname LIMIT 10;
+
 +--------------------------+-------------+
 | fullname                 | contactType |
 +--------------------------+-------------+
@@ -147,7 +162,6 @@ CREATE TABLE t2 (
 
 INSERT INTO t1 VALUES (1),(2),(3);
 INSERT INTO t2 VALUES (2),(3),(4);
-
 
 -- The following query returns distinct values from the query of the t1 table that is not found in the result of the query of the t2 table.
 SELECT id FROM t1

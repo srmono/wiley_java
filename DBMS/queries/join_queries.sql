@@ -44,7 +44,6 @@ GROUP BY
 HAVING
 	total > 60000;
 
-
 -- The table aliases are often used in the statement that contains INNER JOIN, LEFT JOIN, RIGHT JOIN clauses and in subqueries.
 
 SELECT
@@ -107,6 +106,8 @@ FROM
     members m
 INNER JOIN committees c ON c.name = m.name;
 
+
+
 -- MySQL LEFT JOIN clause
 
 SELECT column_list 
@@ -123,7 +124,6 @@ SELECT
 FROM
     members m
 LEFT JOIN committees c USING(name);
-
 
 -- MySQL RIGHT JOIN clause
 

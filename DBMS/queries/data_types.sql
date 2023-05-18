@@ -12,3 +12,6 @@
 -- TIMESTAMP           – introduce you to TIMESTAMP and its features called automatic initialization and automatic update that allows you to define auto-initialized and auto-updated columns for a table.
 -- JSON                – use JSON data type to store JSON documents.
 -- ENUM                – learn how to use ENUM datatype correctly to store enumeration values.
+
+-- spatial data type
+
