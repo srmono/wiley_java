@@ -4,8 +4,6 @@
  The normal forms (1NF, 2NF, 3NF, 4NF, 5NF, and BCNF) are guidelines 
  that help ensure data integrity and minimize anomalies. */
 
- 
-
 First Normal Form (1NF):
 
 -- Each attribute (column) in a table must hold only atomic (indivisible) values.
@@ -124,7 +122,10 @@ Project_ID	Project_Name
 -- The table must already be in 4NF.
 -- It addresses join dependencies, where data can be derived by joining multiple tables.
 
--- Example: Suppose we have a table called "Authors_Books" with columns: Author_ID, Book_ID, Author_Name, Book_Name, and Genre. In 5NF, we need to separate the join dependency between Author_ID, Author_Name, and Genre.
+-- Example: Suppose we have a table called "Authors_Books" 
+    -- with columns: Author_ID, Book_ID, Author_Name, Book_Name, 
+    -- and Genre. In 5NF, we need to separate the join dependency 
+    -- between Author_ID, Author_Name, and Genre.
 
 -- Authors_Books Table:
 Author_ID	Book_ID	Author_Name	Book_Name	Genre

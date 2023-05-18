@@ -97,6 +97,14 @@ The SUM() function returns the sum of values in a set. The SUM() function ignore
 
 -- Usecases:-
 -- Get the total order value of each product, you can use the SUM() function in conjunction with the GROUP BY clause
+
+SELECT 
+    productCode, SUM(priceEach * quantityOrdered) AS total
+FROM 
+    orderdetails
+GROUP BY productCode
+ORDER BY total DESC; 
+
 +-------------+-----------+
 | productCode | total     |
 +-------------+-----------+
@@ -184,11 +192,87 @@ The GROUP_CONCAT() concatenates a set of strings and returns the concatenated st
 
 -- use the GROUP_CONCAT() function to return the sales staffs and list of customers that each sales staff is in charge of:
 
-+-----------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| firstName | lastName | customers                                                                                                                                                                                                          |
-+-----------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Andy      | Fixter   | Anna's Decorations, Ltd,Australian Collectables, Ltd,Australian Collectors, Co.,Australian Gift Network, Co,Souveniers And Things Co.                                                                              |
-| Barry     | Jones    | Baane Mini Imports,Bavarian Collectables Imports, Co.,Blauer See Auto, Co.,Clover Collections, Co.,Herkku Gifts,Norway Gifts By Mail, Co.,Scandinavian Gift Ideas,Toms Spezialitäten, Ltd,Volvo Model Replicas, Co |
-+-----------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-2 rows in set (0.03 sec)
 
+SELECT
+    firstName,
+    lastName,
+    GROUP_CONCAT(
+        DISTINCT customerName
+        ORDER BY customerName
+    ) customers 
+FROM 
+    employees
+INNER JOIN customers 
+    ON customers.salesRepEmployeeNumber = employeeNumber
+GROUP BY employeeNumber
+ORDER BY firstName, lastName;
+
+-- +-----------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+-- | firstName | lastName | customers                                                                                                                                                                                                          |
+-- +-----------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+-- | Andy      | Fixter   | Anna's Decorations, Ltd,Australian Collectables, Ltd,Australian Collectors, Co.,Australian Gift Network, Co,Souveniers And Things Co.                                                                              |
+-- | Barry     | Jones    | Baane Mini Imports,Bavarian Collectables Imports, Co.,Blauer See Auto, Co.,Clover Collections, Co.,Herkku Gifts,Norway Gifts By Mail, Co.,Scandinavian Gift Ideas,Toms Spezialitäten, Ltd,Volvo Model Replicas, Co |
+-- +-----------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+-- 2 rows in set (0.03 sec)
+
+---------------------------------------
+-- AVG QUERIES
+-- Using product table
+
+SELECT 
+    AVG(buyPrice) 'Average Price'
+FROM 
+    products;
+
+-- using WHERE clause
+
+SELECT 
+    AVG(buyPrice) 'Average Price of classic cars'
+FROM 
+    products
+WHERE
+    productLine= 'Classic Cars';
+
+-- check if there are nay products which have some prices;
+
+SELECT 
+    COUNT(buyPrice) - COUNT(DISTINCT buyPrice)
+FROM 
+    products;
+
+-- FORMAT 
+SELECT 
+    FORMAT(AVG(buyPrice), 2)
+FROM 
+    products;
+
+-- using HAVING CLAUSE
+SELECT 
+    productLine,
+    AVG(buyPrice) 'Average Price'
+FROM 
+    products
+GROUP BY productLine
+HAVING AVG(buyPrice) > 50;
+
+-- CALCULATE the average buy price of the average buy prices of product lines;
+SELECT 
+    AVG(pl_avg) 'Average Product'
+FROM (
+    SELECT
+    AVG(buyPrice) pl_avg
+    FROM products GROUP BY productLine
+) avgs;
+
+-- pl_avg,:- 45, 67, 56, NULL, 45, 89
+SELECT
+    AVG( IF(productLine = 'Classic Cars', 
+            buyPrice, 
+            NULL)) / AVG(buyPrice) 'Classic Cars / Products'
+FROM 
+    products;
+
+-- CASE 
+-- IF 
+-- IFNULL 
+-- NULLIF 
