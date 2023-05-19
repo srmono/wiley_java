@@ -59,23 +59,87 @@ WHERE
 
 CREATE INDEX idx_jobTitle ON employees(jobTitle);
 
+--------------------------------------------
 
-DROP INDEX index_name ON table_name
-[algorithm_option | lock_option]
+-- MySQL DROP INDEX statement syntax
+-- To remove an existing index from a table, you use the DROP INDEX statement as follows:
 
-employees 
-copy of employees 
+    DROP INDEX index_name ON table_name
+    [algorithm_option | lock_option]
 
-Algorithm_option:
-COPY    :  The table is copies to the new table row by row, the DROP INDEX is then perfomed on the copy of the original table. The cuoncurrent data manipulation statements such as INSERT and UPDATE are not permitted
+-- In this syntax:
 
-INPLACE : The table is rebuilt in place instead of copied to the new one. MySQL issues metadata lock on the table during. The cuoncurrent data manipulation statements are allowed 
+-- First, specify the name of the index which you want to remove after the DROP INDEX keywords.
+-- Second, specify the name of the table to which the index belongs.
+
+-- Algorithm
+-- The algorithm_option allows you to specify a specific algorithm used for the index removal. The following shows the syntax of the algorithm_option clause:
+
+     ALGORITHM [=] {DEFAULT|INPLACE|COPY}
+
+-- For the index removal, the following algorithms are supported:
+
+-- COPY: The table is copied to the new table row by row, the DROP INDEX is then performed on the copy of the original table. The concurrent data manipulation statements such as INSERT and UPDATE are not permitted.
+
+-- INPLACE: The table is rebuilt in place instead of copied to the new one. MySQL issues an exclusive metadata lock on the table during the preparation and execution phases of the index removal operation. This algorithm allows for concurrent data manipulation statements.
+-- Note that the ALGORITHM clause is optional. If you skip it, MySQL uses INPLACE. In case the INPLACE is not supported, MySQL uses COPY.
+
+-- Using DEFAULT has the same effect as omitting the ALGORITHM clause.
+
+Lock
+The lock_option controls the level of concurrent reads and writes on the table while the index is being removed.
+
+The following shows the syntax of the lock_option:
+
+    LOCK [=] {DEFAULT|NONE|SHARED|EXCLUSIVE}
+
+-- The following locking modes are supported:
+
+--  - DEFAULT: this allows you to have the maximum level of concurrency for a given algorithm. First, it allows concurrent reads and writes if supported. If not, allow concurrent reads if supported. If not, enforce exclusive access.
+--  - NONE: if the NONE is supported, you can have concurrent reads and writes. Otherwise, MySQL issues an error.
+--  - SHARED: if the SHARED is supported, you can have concurrent reads, but not writes. MySQL issues an error if the concurrent reads are not supported.
+--  - EXCLUSIVE: this enforces exclusive access.
+
+CREATE TABLE leads(
+    lead_id INT AUTO_INCREMENT,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    information_source VARCHAR(255),
+    INDEX name(first_name,last_name),
+    UNIQUE email(email),
+    PRIMARY KEY(lead_id)
+);
 
 
+The following statement removes the name index from the leads table:
 
-Lock_option: {DEFAULT | NONE | SHARED | EXCLUSIVE}
+    DROP INDEX name ON leads;
 
+The following statement drops the email index from the leads table with a specific algorithm and lock:
 
+    DROP INDEX email ON leads
+    ALGORITHM = INPLACE 
+    LOCK = DEFAULT;
+
+MySQL DROP PRIMARY KEY index
+To drop the primary key whose index name is PRIMARY, you use the following statement:
+
+    DROP INDEX `PRIMARY` ON table_name;
+
+The following statement creates a new table named twith a primary key:
+
+    CREATE TABLE t(
+        pk INT PRIMARY KEY,
+        c VARCHAR(10)
+    );
+
+Code language: SQL (Structured Query Language) (sql)
+To drop the primary key index, you use the following statement:
+
+    DROP INDEX `PRIMARY` ON t;
+
+----------------------------------------------------------------------
 --- List indexes 
 
 SHOW INDEXES FROM employees;
@@ -134,7 +198,22 @@ SHOW INDEXES FROM table_name WHERE visible = 'NO';
 -------------------------------------------
 
 --- PREFIX INDEXES 
-column_name(length);
+
+-- MySQL Prefix Index
+-- When you create a secondary index for a column, MySQL stores the values of the columns in a separate data structure e.g., B-Tree and Hash.
+
+-- In case the columns are the string columns, the index will consume a lot of disk space and potentially slow down the INSERT operations.
+
+-- To address this issue, MySQL allows you to create an index for the leading part of the column values of the string columns using the following syntax:
+
+    column_name(length)
+-- In this syntax, 
+-- the length is the number of characters for the non-binary string types such as CHAR, VARCHAR, and TEXT and the number of bytes for binary string types e.g., BINARY, VARBINARY, and BLOB.
+
+-- MySQL allows you to optionally create column prefix key parts for CHAR, VARCHAR, BINARY, and VARBINARY columns. If you create indexes for BLOB and TEXT columns, you must specify the column prefix key parts.
+
+-- Notice that the prefix support and lengths of prefixes if supported are storage engine dependent. For InnoDB tables with  REDUNDANT or COMPACT row format, the maximum prefix length is 767 bytes. However, for the InnoDB tables with  DYNAMIC or COMPRESSED row format, the prefix length is 3,072 bytes. MyISAM tables have the prefix length up to 1,000 bytes.
+
 
 CREATE TABLE table_name(
     column_list,
@@ -204,6 +283,21 @@ firstName, lastName and email from employees where lastName is "Patterson"
 
 ----------------------------------
 INVISIBLE 
+-- Introduction to MySQL invisible index
+-- The invisible indexes allow you to mark indexes as unavailable for the query optimizer. MySQL maintains the invisible indexes and keeps them up to date when the data in the columns associated with the indexes changes.
+
+-- By default, indexes are visible. To make them invisible, you have to explicitly declare its visibility at the time of creation, or by using the ALTER TABLE command. MySQL provides us with the VISIBLE and INVISIBLE keywords to maintain index visibility.
+
+CREATE INDEX index_name
+ON table_name( c1, c2, ...) INVISIBLE;
+
+-- In this syntax:
+
+-- First, you specify the name of the index after the CREATE INDEX clause.
+-- Second, you list the table name and the column list which you want to add to the index. The INVISIBLE keyword indicates that the index that you are creating is invisible.
+
+
+
 
 CREATE INDEX index_name ON table_name(col1, col2) [ INVISIBLE | VISIBLE];
 
