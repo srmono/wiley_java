@@ -148,7 +148,7 @@ DECLARE error message and return that error message
 update customers set extra_payment = 30000 where id = 1;
 
 ErrorCode : 1644 : the new extra_payment should not be more than 2 emi amount 
-.....
+-----
 
 IF extra_payment > emi * 2
     SIGNAL SQLSTATE '45000'  SET MESSAGE_TEXT = errorMessage
