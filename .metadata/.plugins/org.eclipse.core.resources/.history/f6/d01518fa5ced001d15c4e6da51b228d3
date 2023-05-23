@@ -1,7 +1,0 @@
-package data_structures;
-
-public class StackClass {
-	public static void main(String[] args) {
-
-	}
-}

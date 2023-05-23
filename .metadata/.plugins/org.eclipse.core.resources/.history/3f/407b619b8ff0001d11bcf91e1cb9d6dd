@@ -1,7 +1,0 @@
-package optimization;
-
-public class CommonSubExpression {
-	public static void main(String[] args) {
-
-	}
-}

@@ -1,8 +1,0 @@
-package optimization;
-
-public class MemoryLeak {
-	public static void main(String[] args) {
-		
-	}
-
-}

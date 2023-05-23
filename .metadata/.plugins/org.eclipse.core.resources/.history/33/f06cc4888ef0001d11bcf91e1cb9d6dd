@@ -1,8 +1,0 @@
-package optimization;
-
-
-public class CompileTimeEvaluation {
-	public static void main(String[] args) {
-		
-	}
-}
