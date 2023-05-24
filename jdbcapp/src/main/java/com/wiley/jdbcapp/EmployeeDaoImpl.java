@@ -9,7 +9,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	public void createEmployee(Employee emp) {
 		conn = DBConnection.createDBConnection();
 		String query = "INSERT INTO employee values(?,?,?,?)";
-		
+		System.out.println(emp);
 		try {
 			PreparedStatement ps = conn.prepareStatement(query);
 			ps.setInt(1, emp.getId());
