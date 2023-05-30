@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		https://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util
+		https://www.springframework.org/schema/util/spring-util.xsd">
+		
+	<context:annotation-config/>
+	
+	<util:list list-class="java.util.LinkedList" id="myfriends">
+		<value>Shivam</value>
+		<value>Sachin</value>
+		<value>Rishav</value>
+		<value>Jahnavi</value>
+	</util:list>
+	
+	<util:map map-class="java.util.HashMap" id="fee">
+		<entry key="Spring" value="90000" /> 
+	</util:map>
+	
+	<bean class="com.wiley.springcore.autowire.annotation.Person" name="person1">
+		<property name="friends"  ref="myfriends"/>
+	</bean>
+	 
+	<bean class="com.wiley.springcore.autowire.annotation.Address" name="address">
+		<property name="street" value="ddddddddddddd" />
+		<property name="city" value="Bangalore" />
+	</bean>
+	
+	<bean class="com.wiley.springcore.autowire.annotation.Address" name="addr2">
+		<property name="street" value="Marathahalli" />
+		<property name="city" value="Bangalore" />
+	</bean>
+	
+	<bean class="com.wiley.springcore.autowire.annotation.Emp" name="emp1" />
+	
+	
+</beans>

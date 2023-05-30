@@ -11,6 +11,13 @@ public class AdminDaoImpl implements IAdminDAO{
 	
 	public boolean adminLogin(Admin admin) {
 		// TODO Auto-generated method stub
+		
+		try {
+			// db query username, and pw
+			// while if rs.next()  result = true
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		return false;
 	}
 	

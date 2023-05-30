@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.concurrent.ExecutorService"/>
-    <fullyQualifiedTypeName name="java.lang.ThreadGroup"/>
-    <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
-    <fullyQualifiedTypeName name="java.util.concurrent.ThreadFactory"/>
-    <fullyQualifiedTypeName name="JavaThreads.RequestProcessor"/>
-    <fullyQualifiedTypeName name="JavaThreads.SupportClass"/>
-    <fullyQualifiedTypeName name="JavaThreads.T1"/>
-    <fullyQualifiedTypeName name="JavaThreads.BankAccount"/>
-    <fullyQualifiedTypeName name="generics.IntegerPrinter"/>
-    <fullyQualifiedTypeName name="generics.Animal"/>
-    <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="java.util.NavigableSet"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
     <fullyQualifiedTypeName name="com.sun.source.tree.Tree"/>
     <fullyQualifiedTypeName name="java.util.TreeMap"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.code.Attribute.Array"/>
@@ -27,7 +13,6 @@
     <fullyQualifiedTypeName name="collections.IdComparator"/>
     <fullyQualifiedTypeName name="collections.NameComparator"/>
     <fullyQualifiedTypeName name="collections.ArrayListClass"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArrayList"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
@@ -52,12 +37,27 @@
     <fullyQualifiedTypeName name="data_structures.NodeThree"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="com.wiley.jdbcapp.DBCnnection"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="com.wiley.jdbcapp.Employee"/>
     <fullyQualifiedTypeName name="com.wiley.jdbcapp.EmployeeDao"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.CallableStatement"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.util.ResourceBundle"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="com.wiley.bookpub.model.Admin"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.wiley.bookpub.dao.IAdminDAO"/>
+    <fullyQualifiedTypeName name="com.wiley.bookpub.dao.ISkillDAO"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.wiley.bookpub.util.DBConnection"/>
+    <fullyQualifiedTypeName name="com.wiley.bookpub.util.SkillQuery"/>
+    <fullyQualifiedTypeName name="com.wiley.bookpub.dao.SkillDaoImpl"/>
+    <fullyQualifiedTypeName name="com.wiley.bookpub.model.Skillstore"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.wiley.bookpub.controller.SkillController"/>
+    <fullyQualifiedTypeName name="com.wiley.bookpub.view.MainView"/>
+    <fullyQualifiedTypeName name="com.wiley.bookpub.view.SkillView"/>
 </qualifiedTypeNameHistroy>
