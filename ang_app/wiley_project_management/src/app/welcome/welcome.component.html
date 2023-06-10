@@ -1,0 +1,15 @@
+<h2>Students List</h2>
+<h3>{{message}}</h3>
+<ul class="students">
+    <li [class.selected]="student === selectedStudent" 
+    *ngFor="let student of students"  (click)="onSelect(student)">
+        {{student.id}} - {{student.name | uppercase}}
+    </li>
+    
+</ul>
+
+<div *ngIf="selectedStudent">
+    <h1>{{ selectedStudent.name | uppercase}}</h1>
+</div>
+
+

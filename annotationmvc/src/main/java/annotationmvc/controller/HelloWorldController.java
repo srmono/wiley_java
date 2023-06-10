@@ -2,18 +2,20 @@ package annotationmvc.controller;
 
 import java.time.LocalDateTime;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import annotationmvc.model.HelloWorld;
 
 @Controller
-//@RequestMapping("/hello")
 public class HelloWorldController {
 
-	@RequestMapping("/helloworld")
-	public String handler(Model model) {
+	@RequestMapping(value="/helloworld")
+	public String handler(Model model, HttpServletRequest request) {
 		
 		HelloWorld hw = new HelloWorld();
 		

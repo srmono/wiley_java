@@ -1,1 +1,44 @@
 /.metadata/
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/ang_app/wiley_project_management/node_modules
+/ang_app/wiley_project_management/npm-debug.log
+/ang_app/wiley_project_management/yarn-error.log
+
+# IDEs and editors
+/ang_app/wiley_project_management/.idea/
+/ang_app/wiley_project_management/.project
+/ang_app/wiley_project_management/.classpath
+/ang_app/wiley_project_management/.c9/
+/ang_app/wiley_project_management/*.launch
+/ang_app/wiley_project_management/.settings/
+/ang_app/wiley_project_management/*.sublime-workspace
+
+# Visual Studio Code
+/ang_app/wiley_project_management/.vscode/*
+/ang_app/wiley_project_management/!.vscode/settings.json
+/ang_app/wiley_project_management/!.vscode/tasks.json
+/ang_app/wiley_project_management/!.vscode/launch.json
+/ang_app/wiley_project_management/!.vscode/extensions.json
+/ang_app/wiley_project_management/.history/*
+
+# Miscellaneous
+/ang_app/wiley_project_management/.angular/cache
+/ang_app/wiley_project_management/.sass-cache/
+/ang_app/wiley_project_management/connect.lock
+/ang_app/wiley_project_management/coverage
+/ang_app/wiley_project_management/libpeerconnection.log
+/ang_app/wiley_project_management/testem.log
+/ang_app/wiley_project_management/typings
+
+# System files
+/ang_app/wiley_project_management/.DS_Store
+/ang_app/wiley_project_management/Thumbs.db

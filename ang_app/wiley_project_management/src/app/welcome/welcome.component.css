@@ -1,0 +1,39 @@
+.students{
+    list-style: none;
+    margin: 0 0 2em 0;
+    padding: 0;
+    
+    display: flex;
+}
+
+
+.students li {
+    flex: 1;
+    width: 15em;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #eee;
+    margin: .5em;
+    padding: 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: stretch;
+    height: 1.8em;
+}
+
+.students li:hover {
+    color: #525252;
+    background-color: #e6e6e6;
+    left: .1em;
+}
+
+.students li:active {
+    background-color: #525252;
+    color: #fafafa;
+}
+
+.students li.selected {
+    background-color:#525252;
+    color: white;
+}

@@ -1,0 +1,51 @@
+{
+  "tasks":[
+    {
+        "id": 1,
+        "text": "Form validation",
+        "day": "June 11th at 1.30pm",
+        "reminder": true
+    },
+    {
+        "id": 2,
+        "text": "Spring app",
+        "day": "June 12th at 11.30am",
+        "reminder": true
+    },
+    {
+        "id": 3,
+        "text": "Angular App",
+        "day": "June 13th at 1.30pm",
+        "reminder": false
+    },
+    {
+        "id": 4,
+        "text": "Cloud",
+        "day": "June 19th at 5.30pm",
+        "reminder": true
+    },
+    {
+        "id": 5,
+        "text": "fullstack",
+        "day": "June 18th at 6.30pm",
+        "reminder": false
+    }
+],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

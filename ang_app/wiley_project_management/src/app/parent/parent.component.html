@@ -1,0 +1,8 @@
+<div class="container">
+    <p>parent works!</p>
+    Child Message : {{receivedMessage}}
+    <app-child 
+        [message]="message"
+        (sendEvent)="receiveMessage($event)"
+    ></app-child>
+</div>
