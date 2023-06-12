@@ -1,4 +1,13 @@
-<div>header</div>
+<header>
+    <h2>{{title}}</h2>
+    <app-button
+        *ngIf="hasRoute('/')"
+        color="{{showAddTask ? 'red' : 'green'}}"
+        text="{{showAddTask ? 'Close' : 'Add'}}"
+        (btnClick)="toggleTask()"
+    ></app-button>
+</header>
+
 <!-- <div class="card">
     <div class="card-header"> {{pagetitle}}</div>
     <div class="card-body">
