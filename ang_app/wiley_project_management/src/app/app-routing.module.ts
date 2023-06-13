@@ -6,12 +6,15 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
 
 const routes: Routes = [
   {path:'', component: TasksComponent},
-  {path:'about', component: AboutComponent},
-  {path:'addtask', component: AddTaskComponent},
+  {path:'about',  component: AboutComponent},
+  // {path:'/', redirectTo:"about", pathMatch:'full' }
+  // //{path: "**", component: pagenotfound}
+  // // {path:'addtask', component: AddTaskComponent},
 ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

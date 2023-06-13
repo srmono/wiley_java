@@ -14,7 +14,7 @@ const httpOptions = {
 })
 
 export class TaskService {
-  private apiUrl = "http://localhost:5000/tasks";
+  private apiUrl = "http://localhost:5000/tasks"; //aws
 
   constructor(private http: HttpClient){}
 
@@ -25,8 +25,13 @@ export class TaskService {
 //Delete Task
 // http://localhost:5000/tasks/{task_id}
 deleteTask(task: Task): Observable<Task>{
-  const url = `${this.apiUrl}/${task.id}`
+  const url = `${this.apiUrl}/${task.id}` //http://localhost:5000/tasks/1
   return this.http.delete<Task>(url);
+}
+
+getTaskByID(id: number): Observable<Task>{
+  const url = `${this.apiUrl}/${id}` //http://localhost:5000/tasks/1
+  return this.http.get<Task>(url);
 }
 
  //update Task Reminder
